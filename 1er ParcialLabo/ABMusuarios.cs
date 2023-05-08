@@ -118,9 +118,28 @@ namespace _1er_ParcialLabo
 
         private void ABMusuarios_Load(object sender, EventArgs e)
         {
-            ltbUsuarios.DataSource = datos.MostrarUsuarios();
+            //ltbUsuarios.DataSource = datos.MostrarUsuarios();
             cbxCategoria.Items.Add(CategoriaUsuarios.Cliente);
             cbxCategoria.Items.Add(CategoriaUsuarios.Vendedor);
         }
+
+        private void btnVendedor_Click(object sender, EventArgs e)
+        {
+            ltbUsuarios.DataSource = datos.MostrarVendedores();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            ltbUsuarios.DataSource = datos.MostrarUsuarios();
+        }
+
+        private void grpModificarProd_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
     }
 }

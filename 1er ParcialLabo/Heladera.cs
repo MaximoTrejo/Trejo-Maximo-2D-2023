@@ -133,7 +133,7 @@ namespace _1er_ParcialLabo
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             ABMusuarios aBMusuarios = new ABMusuarios(datos, usuarioLogeado);
             aBMusuarios.Show();

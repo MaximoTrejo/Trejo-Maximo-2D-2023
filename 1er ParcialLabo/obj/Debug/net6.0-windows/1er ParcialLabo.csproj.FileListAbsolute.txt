@@ -26,3 +26,31 @@ D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo
 D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.listadoFacturacion.resources
 D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.ABMproductos.resources
 D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.ABMusuarios.resources
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Debug\net6.0-windows\1er ParcialLabo.exe
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Debug\net6.0-windows\1er ParcialLabo.deps.json
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Debug\net6.0-windows\1er ParcialLabo.runtimeconfig.json
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Debug\net6.0-windows\1er ParcialLabo.dll
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Debug\net6.0-windows\1er ParcialLabo.pdb
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Debug\net6.0-windows\Entidades - Parcial Laboratorio.dll
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Debug\net6.0-windows\Entidades - Parcial Laboratorio.pdb
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.csproj.AssemblyReference.cache
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.ABMproductos.resources
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.ABMusuarios.resources
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.Heladera.resources
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.listadoFacturacion.resources
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.Login.resources
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.menuVendedor.resources
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.Properties.Resources.resources
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.saldoCliente.resources
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.Venta.resources
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.csproj.GenerateResource.cache
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.AssemblyInfoInputs.cache
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.AssemblyInfo.cs
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.csproj.CoreCompileInputs.cache
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.csproj.CopyComplete
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.dll
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\refint\1er ParcialLabo.dll
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.pdb
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.genruntimeconfig.cache
+C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Debug\net6.0-windows\ref\1er ParcialLabo.dll

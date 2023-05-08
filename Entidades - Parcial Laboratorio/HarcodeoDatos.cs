@@ -416,6 +416,44 @@ namespace Entidades___Parcial_Laboratorio
             return retorno;
         }
 
+
+        public List<string> MostrarClientes()
+        {
+            List<string> cli = new List<string>();
+
+            foreach (Usuario i in Usuarios)
+            {
+
+                if (i is not null)
+                {
+                    if (!(i.validarVendedor()))
+                    {
+                       cli.Add(i.Email);
+                    }
+                    
+                }
+            }
+            return cli;
+        }
+
+        public List<string> MostrarVendedores()
+        {
+            List<string> vend = new List<string>();
+
+            foreach (Usuario i in Usuarios)
+            {
+
+                if (i is not null)
+                {
+                    if (i.validarVendedor())
+                    {
+                        vend.Add(i.Email);
+                    }
+
+                }
+            }
+            return vend;
+        }
         //---------------------------------------Terminar de codear AMB usuarios------------------------------------------------------------
 
     }

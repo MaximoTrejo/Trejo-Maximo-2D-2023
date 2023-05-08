@@ -155,6 +155,29 @@ namespace _1er_ParcialLabo
             this.Hide();
         }
 
+        private void grpModificarProd_Enter(object sender, EventArgs e)
+        {
 
+        }
+
+        private void ABMproductos_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ltbProductos_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxnombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAceptar_Click_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }
