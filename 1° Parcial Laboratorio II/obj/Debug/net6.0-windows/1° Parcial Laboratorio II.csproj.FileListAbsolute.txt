@@ -1,0 +1,7 @@
+D:\FACULTAD\Ejercicios\1° Parcial Laboratorio II\obj\Debug\net6.0-windows\1° Parcial Laboratorio II.csproj.AssemblyReference.cache
+D:\FACULTAD\Ejercicios\1° Parcial Laboratorio II\obj\Debug\net6.0-windows\_1__Parcial_Laboratorio_II.Form1.resources
+D:\FACULTAD\Ejercicios\1° Parcial Laboratorio II\obj\Debug\net6.0-windows\1° Parcial Laboratorio II.csproj.GenerateResource.cache
+D:\FACULTAD\Ejercicios\1° Parcial Laboratorio II\obj\Debug\net6.0-windows\1° Parcial Laboratorio II.GeneratedMSBuildEditorConfig.editorconfig
+D:\FACULTAD\Ejercicios\1° Parcial Laboratorio II\obj\Debug\net6.0-windows\1° Parcial Laboratorio II.AssemblyInfoInputs.cache
+D:\FACULTAD\Ejercicios\1° Parcial Laboratorio II\obj\Debug\net6.0-windows\1° Parcial Laboratorio II.AssemblyInfo.cs
+D:\FACULTAD\Ejercicios\1° Parcial Laboratorio II\obj\Debug\net6.0-windows\1° Parcial Laboratorio II.csproj.CoreCompileInputs.cache

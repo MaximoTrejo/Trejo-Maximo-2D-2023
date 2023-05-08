@@ -1,0 +1,28 @@
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.csproj.AssemblyReference.cache
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.csproj.GenerateResource.cache
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.GeneratedMSBuildEditorConfig.editorconfig
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.AssemblyInfoInputs.cache
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.AssemblyInfo.cs
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.csproj.CoreCompileInputs.cache
+D:\FACULTAD\Ejercicios\1er ParcialLabo\bin\Debug\net6.0-windows\1er ParcialLabo.exe
+D:\FACULTAD\Ejercicios\1er ParcialLabo\bin\Debug\net6.0-windows\1er ParcialLabo.deps.json
+D:\FACULTAD\Ejercicios\1er ParcialLabo\bin\Debug\net6.0-windows\1er ParcialLabo.runtimeconfig.json
+D:\FACULTAD\Ejercicios\1er ParcialLabo\bin\Debug\net6.0-windows\1er ParcialLabo.dll
+D:\FACULTAD\Ejercicios\1er ParcialLabo\bin\Debug\net6.0-windows\1er ParcialLabo.pdb
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.csproj.CopyComplete
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.dll
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\refint\1er ParcialLabo.dll
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.pdb
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\1er ParcialLabo.genruntimeconfig.cache
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\ref\1er ParcialLabo.dll
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.Login.resources
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.Venta.resources
+D:\FACULTAD\Ejercicios\1er ParcialLabo\bin\Debug\net6.0-windows\Entidades - Parcial Laboratorio.dll
+D:\FACULTAD\Ejercicios\1er ParcialLabo\bin\Debug\net6.0-windows\Entidades - Parcial Laboratorio.pdb
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.Heladera.resources
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.menuVendedor.resources
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.saldoCliente.resources
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.Properties.Resources.resources
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.listadoFacturacion.resources
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.ABMproductos.resources
+D:\FACULTAD\Ejercicios\1er ParcialLabo\obj\Debug\net6.0-windows\_1er_ParcialLabo.ABMusuarios.resources

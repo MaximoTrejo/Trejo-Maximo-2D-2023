@@ -1,0 +1,33 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "1er ParcialLabo/1.0.0": {
+        "runtime": {
+          "1er ParcialLabo.dll": {}
+        }
+      },
+      "Entidades - Parcial Laboratorio/1.0.0": {
+        "runtime": {
+          "Entidades - Parcial Laboratorio.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "1er ParcialLabo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Entidades - Parcial Laboratorio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

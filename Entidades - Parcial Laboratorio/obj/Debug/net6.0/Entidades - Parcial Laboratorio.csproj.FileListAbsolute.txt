@@ -1,0 +1,12 @@
+D:\FACULTAD\Ejercicios\Entidades - Parcial Laboratorio\obj\Debug\net6.0\Entidades - Parcial Laboratorio.csproj.AssemblyReference.cache
+D:\FACULTAD\Ejercicios\Entidades - Parcial Laboratorio\obj\Debug\net6.0\Entidades - Parcial Laboratorio.GeneratedMSBuildEditorConfig.editorconfig
+D:\FACULTAD\Ejercicios\Entidades - Parcial Laboratorio\obj\Debug\net6.0\Entidades - Parcial Laboratorio.AssemblyInfoInputs.cache
+D:\FACULTAD\Ejercicios\Entidades - Parcial Laboratorio\obj\Debug\net6.0\Entidades - Parcial Laboratorio.AssemblyInfo.cs
+D:\FACULTAD\Ejercicios\Entidades - Parcial Laboratorio\obj\Debug\net6.0\Entidades - Parcial Laboratorio.csproj.CoreCompileInputs.cache
+D:\FACULTAD\Ejercicios\Entidades - Parcial Laboratorio\bin\Debug\net6.0\Entidades - Parcial Laboratorio.deps.json
+D:\FACULTAD\Ejercicios\Entidades - Parcial Laboratorio\bin\Debug\net6.0\Entidades - Parcial Laboratorio.dll
+D:\FACULTAD\Ejercicios\Entidades - Parcial Laboratorio\bin\Debug\net6.0\Entidades - Parcial Laboratorio.pdb
+D:\FACULTAD\Ejercicios\Entidades - Parcial Laboratorio\obj\Debug\net6.0\Entidades - Parcial Laboratorio.dll
+D:\FACULTAD\Ejercicios\Entidades - Parcial Laboratorio\obj\Debug\net6.0\refint\Entidades - Parcial Laboratorio.dll
+D:\FACULTAD\Ejercicios\Entidades - Parcial Laboratorio\obj\Debug\net6.0\Entidades - Parcial Laboratorio.pdb
+D:\FACULTAD\Ejercicios\Entidades - Parcial Laboratorio\obj\Debug\net6.0\ref\Entidades - Parcial Laboratorio.dll
