@@ -360,16 +360,28 @@ namespace Entidades___Parcial_Laboratorio
 
             if (nombre != null && pass != null)
             {
+                
+                    Usuarios.Add(new Clientes(nombre, pass, importe)); ;
+                    retorno = true;
+                
+
+            }
+            return retorno;
+        }
+
+
+        public bool agregarVendedor(string nombre, string pass, Usuario usuario, string tipo)
+        {
+            bool retorno = false;
+
+            if (nombre != null && pass != null)
+            {
                 if (tipo == "Vendedor")
                 {
                     Usuarios.Add(new Vendedor(nombre, pass));
                     retorno = true;
                 }
-                else
-                {
-                    Usuarios.Add(new Clientes(nombre, pass, importe)); ;
-                    retorno = true;
-                }
+                
 
             }
             return retorno;

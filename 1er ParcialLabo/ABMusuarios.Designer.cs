@@ -28,220 +28,295 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ltbUsuarios = new System.Windows.Forms.ListBox();
-            this.grpModificarProd = new System.Windows.Forms.GroupBox();
-            this.cbxCategoria = new System.Windows.Forms.ComboBox();
-            this.lblCategoria = new System.Windows.Forms.Label();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.tbxnombre = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txbImporte = new System.Windows.Forms.TextBox();
-            this.tbxPass = new System.Windows.Forms.TextBox();
-            this.btnVendedor = new System.Windows.Forms.Button();
-            this.btnClientes = new System.Windows.Forms.Button();
-            this.grpModificarProd.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ABMusuarios));
+            ltbUsuarios = new ListBox();
+            grpModificarProd = new GroupBox();
+            cbxCategoria = new ComboBox();
+            lblCategoria = new Label();
+            btnAceptar = new Button();
+            label1 = new Label();
+            btnEliminar = new Button();
+            btnAgregar = new Button();
+            btnModificar = new Button();
+            tbxnombre = new TextBox();
+            label2 = new Label();
+            label3 = new Label();
+            txbImporte = new TextBox();
+            tbxPass = new TextBox();
+            btnVendedor = new Button();
+            btnClientes = new Button();
+            pnlBordeSuperior = new Panel();
+            btnVolver = new Button();
+            ptbMini = new PictureBox();
+            ptbSalir = new PictureBox();
+            label5 = new Label();
+            grpModificarProd.SuspendLayout();
+            pnlBordeSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbMini).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptbSalir).BeginInit();
+            SuspendLayout();
             // 
             // ltbUsuarios
             // 
-            this.ltbUsuarios.FormattingEnabled = true;
-            this.ltbUsuarios.ItemHeight = 19;
-            this.ltbUsuarios.Location = new System.Drawing.Point(14, 94);
-            this.ltbUsuarios.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ltbUsuarios.Name = "ltbUsuarios";
-            this.ltbUsuarios.Size = new System.Drawing.Size(353, 308);
-            this.ltbUsuarios.TabIndex = 1;
-            this.ltbUsuarios.SelectedIndexChanged += new System.EventHandler(this.ltbUsuarios_SelectedIndexChanged);
+            ltbUsuarios.FormattingEnabled = true;
+            ltbUsuarios.ItemHeight = 17;
+            ltbUsuarios.Location = new Point(11, 94);
+            ltbUsuarios.Name = "ltbUsuarios";
+            ltbUsuarios.Size = new Size(353, 276);
+            ltbUsuarios.TabIndex = 1;
+            ltbUsuarios.SelectedIndexChanged += ltbUsuarios_SelectedIndexChanged;
             // 
             // grpModificarProd
             // 
-            this.grpModificarProd.Controls.Add(this.cbxCategoria);
-            this.grpModificarProd.Controls.Add(this.lblCategoria);
-            this.grpModificarProd.Controls.Add(this.btnAceptar);
-            this.grpModificarProd.Controls.Add(this.label1);
-            this.grpModificarProd.Controls.Add(this.btnEliminar);
-            this.grpModificarProd.Controls.Add(this.btnAgregar);
-            this.grpModificarProd.Controls.Add(this.btnModificar);
-            this.grpModificarProd.Controls.Add(this.tbxnombre);
-            this.grpModificarProd.Controls.Add(this.label2);
-            this.grpModificarProd.Controls.Add(this.label3);
-            this.grpModificarProd.Controls.Add(this.txbImporte);
-            this.grpModificarProd.Controls.Add(this.tbxPass);
-            this.grpModificarProd.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grpModificarProd.Location = new System.Drawing.Point(392, 94);
-            this.grpModificarProd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpModificarProd.Name = "grpModificarProd";
-            this.grpModificarProd.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpModificarProd.Size = new System.Drawing.Size(274, 313);
-            this.grpModificarProd.TabIndex = 18;
-            this.grpModificarProd.TabStop = false;
-            this.grpModificarProd.Text = "Modificar Producto";
-            this.grpModificarProd.Enter += new System.EventHandler(this.grpModificarProd_Enter);
+            grpModificarProd.Controls.Add(cbxCategoria);
+            grpModificarProd.Controls.Add(lblCategoria);
+            grpModificarProd.Controls.Add(btnAceptar);
+            grpModificarProd.Controls.Add(label1);
+            grpModificarProd.Controls.Add(btnEliminar);
+            grpModificarProd.Controls.Add(btnAgregar);
+            grpModificarProd.Controls.Add(btnModificar);
+            grpModificarProd.Controls.Add(tbxnombre);
+            grpModificarProd.Controls.Add(label2);
+            grpModificarProd.Controls.Add(label3);
+            grpModificarProd.Controls.Add(txbImporte);
+            grpModificarProd.Controls.Add(tbxPass);
+            grpModificarProd.Font = new Font("Microsoft New Tai Lue", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            grpModificarProd.Location = new Point(394, 90);
+            grpModificarProd.Name = "grpModificarProd";
+            grpModificarProd.Size = new Size(274, 280);
+            grpModificarProd.TabIndex = 18;
+            grpModificarProd.TabStop = false;
+            grpModificarProd.Text = "ABM";
             // 
             // cbxCategoria
             // 
-            this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(7, 272);
-            this.cbxCategoria.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(130, 25);
-            this.cbxCategoria.TabIndex = 18;
+            cbxCategoria.FormattingEnabled = true;
+            cbxCategoria.Location = new Point(7, 244);
+            cbxCategoria.Name = "cbxCategoria";
+            cbxCategoria.Size = new Size(130, 25);
+            cbxCategoria.TabIndex = 18;
             // 
             // lblCategoria
             // 
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(7, 248);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(67, 17);
-            this.lblCategoria.TabIndex = 17;
-            this.lblCategoria.Text = "Categoria";
+            lblCategoria.AutoSize = true;
+            lblCategoria.Location = new Point(7, 222);
+            lblCategoria.Name = "lblCategoria";
+            lblCategoria.Size = new Size(67, 17);
+            lblCategoria.TabIndex = 17;
+            lblCategoria.Text = "Categoria";
             // 
             // btnAceptar
             // 
-            this.btnAceptar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Location = new System.Drawing.Point(163, 272);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(98, 33);
-            this.btnAceptar.TabIndex = 16;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            btnAceptar.FlatAppearance.BorderColor = Color.DarkGray;
+            btnAceptar.FlatStyle = FlatStyle.Flat;
+            btnAceptar.Location = new Point(163, 244);
+            btnAceptar.Name = "btnAceptar";
+            btnAceptar.Size = new Size(98, 29);
+            btnAceptar.TabIndex = 16;
+            btnAceptar.Text = "Aceptar";
+            btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 17);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Nombre";
+            label1.AutoSize = true;
+            label1.Location = new Point(8, 31);
+            label1.Name = "label1";
+            label1.Size = new Size(58, 17);
+            label1.TabIndex = 7;
+            label1.Text = "Nombre";
             // 
             // btnEliminar
             // 
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(163, 34);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(98, 35);
-            this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            btnEliminar.FlatAppearance.BorderColor = Color.DarkGray;
+            btnEliminar.FlatStyle = FlatStyle.Flat;
+            btnEliminar.Location = new Point(163, 53);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(98, 32);
+            btnEliminar.TabIndex = 2;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Location = new System.Drawing.Point(163, 119);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(98, 33);
-            this.btnAgregar.TabIndex = 15;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            btnAgregar.FlatAppearance.BorderColor = Color.DarkGray;
+            btnAgregar.FlatStyle = FlatStyle.Flat;
+            btnAgregar.Location = new Point(163, 150);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(98, 29);
+            btnAgregar.TabIndex = 15;
+            btnAgregar.Text = "Agregar";
+            btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // btnModificar
             // 
-            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(163, 79);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(98, 34);
-            this.btnModificar.TabIndex = 1;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            btnModificar.FlatAppearance.BorderColor = Color.DarkGray;
+            btnModificar.FlatStyle = FlatStyle.Flat;
+            btnModificar.Location = new Point(163, 95);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(98, 31);
+            btnModificar.TabIndex = 1;
+            btnModificar.Text = "Modificar";
+            btnModificar.UseVisualStyleBackColor = true;
+            btnModificar.Click += btnModificar_Click;
             // 
             // tbxnombre
             // 
-            this.tbxnombre.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tbxnombre.Location = new System.Drawing.Point(7, 60);
-            this.tbxnombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbxnombre.Name = "tbxnombre";
-            this.tbxnombre.Size = new System.Drawing.Size(130, 25);
-            this.tbxnombre.TabIndex = 8;
+            tbxnombre.ImeMode = ImeMode.On;
+            tbxnombre.Location = new Point(7, 53);
+            tbxnombre.Name = "tbxnombre";
+            tbxnombre.Size = new Size(130, 25);
+            tbxnombre.TabIndex = 8;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 106);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 17);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Contraseña";
+            label2.AutoSize = true;
+            label2.Location = new Point(8, 95);
+            label2.Name = "label2";
+            label2.Size = new Size(77, 17);
+            label2.TabIndex = 12;
+            label2.Text = "Contraseña";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 181);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 17);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Importe";
+            label3.AutoSize = true;
+            label3.Location = new Point(7, 162);
+            label3.Name = "label3";
+            label3.Size = new Size(57, 17);
+            label3.TabIndex = 13;
+            label3.Text = "Importe";
             // 
             // txbImporte
             // 
-            this.txbImporte.Location = new System.Drawing.Point(6, 202);
-            this.txbImporte.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txbImporte.Name = "txbImporte";
-            this.txbImporte.Size = new System.Drawing.Size(130, 25);
-            this.txbImporte.TabIndex = 10;
-
+            txbImporte.Location = new Point(7, 185);
+            txbImporte.Name = "txbImporte";
+            txbImporte.Size = new Size(130, 25);
+            txbImporte.TabIndex = 10;
             // 
             // tbxPass
             // 
-            this.tbxPass.Location = new System.Drawing.Point(7, 132);
-            this.tbxPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbxPass.Name = "tbxPass";
-            this.tbxPass.Size = new System.Drawing.Size(130, 25);
-            this.tbxPass.TabIndex = 9;
+            tbxPass.Location = new Point(7, 118);
+            tbxPass.Name = "tbxPass";
+            tbxPass.Size = new Size(130, 25);
+            tbxPass.TabIndex = 9;
             // 
             // btnVendedor
             // 
-            this.btnVendedor.Location = new System.Drawing.Point(12, 64);
-            this.btnVendedor.Name = "btnVendedor";
-            this.btnVendedor.Size = new System.Drawing.Size(75, 23);
-            this.btnVendedor.TabIndex = 19;
-            this.btnVendedor.Text = "Vendedores";
-            this.btnVendedor.UseVisualStyleBackColor = true;
-            this.btnVendedor.Click += new System.EventHandler(this.btnVendedor_Click);
+            btnVendedor.FlatAppearance.BorderColor = Color.DarkGray;
+            btnVendedor.FlatStyle = FlatStyle.Flat;
+            btnVendedor.Location = new Point(11, 54);
+            btnVendedor.Margin = new Padding(3, 2, 3, 2);
+            btnVendedor.Name = "btnVendedor";
+            btnVendedor.Size = new Size(102, 35);
+            btnVendedor.TabIndex = 19;
+            btnVendedor.Text = "Vendedores";
+            btnVendedor.UseVisualStyleBackColor = true;
+            btnVendedor.Click += btnVendedor_Click;
             // 
             // btnClientes
             // 
-            this.btnClientes.Location = new System.Drawing.Point(109, 64);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(75, 23);
-            this.btnClientes.TabIndex = 20;
-            this.btnClientes.Text = "Clientes";
-            this.btnClientes.UseVisualStyleBackColor = true;
-            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            btnClientes.FlatAppearance.BorderColor = Color.DarkGray;
+            btnClientes.FlatStyle = FlatStyle.Flat;
+            btnClientes.Location = new Point(119, 54);
+            btnClientes.Margin = new Padding(3, 2, 3, 2);
+            btnClientes.Name = "btnClientes";
+            btnClientes.Size = new Size(89, 35);
+            btnClientes.TabIndex = 20;
+            btnClientes.Text = "Clientes";
+            btnClientes.UseVisualStyleBackColor = true;
+            btnClientes.Click += btnClientes_Click;
+            // 
+            // pnlBordeSuperior
+            // 
+            pnlBordeSuperior.BackColor = SystemColors.MenuBar;
+            pnlBordeSuperior.Controls.Add(btnVolver);
+            pnlBordeSuperior.Controls.Add(ptbMini);
+            pnlBordeSuperior.Controls.Add(ptbSalir);
+            pnlBordeSuperior.Controls.Add(label5);
+            pnlBordeSuperior.Dock = DockStyle.Top;
+            pnlBordeSuperior.Location = new Point(0, 0);
+            pnlBordeSuperior.Name = "pnlBordeSuperior";
+            pnlBordeSuperior.Size = new Size(680, 40);
+            pnlBordeSuperior.TabIndex = 21;
+            pnlBordeSuperior.MouseDown += pnlBordeSuperior_MouseDown;
+            pnlBordeSuperior.MouseMove += pnlBordeSuperior_MouseMove;
+            pnlBordeSuperior.MouseUp += pnlBordeSuperior_MouseUp;
+            // 
+            // btnVolver
+            // 
+            btnVolver.FlatAppearance.BorderColor = Color.DarkGray;
+            btnVolver.FlatAppearance.BorderSize = 0;
+            btnVolver.FlatStyle = FlatStyle.Flat;
+            btnVolver.Location = new Point(3, 8);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(67, 29);
+            btnVolver.TabIndex = 19;
+            btnVolver.Text = "<---";
+            btnVolver.UseVisualStyleBackColor = true;
+            btnVolver.Click += btnVolver_Click;
+            // 
+            // ptbMini
+            // 
+            ptbMini.BackColor = SystemColors.ControlLightLight;
+            ptbMini.Dock = DockStyle.Right;
+            ptbMini.Image = (Image)resources.GetObject("ptbMini.Image");
+            ptbMini.Location = new Point(542, 0);
+            ptbMini.Name = "ptbMini";
+            ptbMini.Size = new Size(58, 40);
+            ptbMini.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptbMini.TabIndex = 9;
+            ptbMini.TabStop = false;
+            ptbMini.Click += ptbMini_Click;
+            // 
+            // ptbSalir
+            // 
+            ptbSalir.BackColor = SystemColors.Control;
+            ptbSalir.Dock = DockStyle.Right;
+            ptbSalir.Image = Properties.Resources.salir;
+            ptbSalir.Location = new Point(600, 0);
+            ptbSalir.Name = "ptbSalir";
+            ptbSalir.Size = new Size(80, 40);
+            ptbSalir.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptbSalir.TabIndex = 8;
+            ptbSalir.TabStop = false;
+            ptbSalir.Click += ptbSalir_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft YaHei UI", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label5.Location = new Point(78, 10);
+            label5.Name = "label5";
+            label5.Size = new Size(106, 19);
+            label5.TabIndex = 0;
+            label5.Text = "ABM  Usuarios";
             // 
             // ABMusuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 422);
-            this.Controls.Add(this.btnClientes);
-            this.Controls.Add(this.btnVendedor);
-            this.Controls.Add(this.grpModificarProd);
-            this.Controls.Add(this.ltbUsuarios);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "ABMusuarios";
-            this.Text = "ABMusuarios";
-            this.grpModificarProd.ResumeLayout(false);
-            this.grpModificarProd.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 17F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.AppWorkspace;
+            ClientSize = new Size(680, 390);
+            Controls.Add(pnlBordeSuperior);
+            Controls.Add(btnClientes);
+            Controls.Add(btnVendedor);
+            Controls.Add(grpModificarProd);
+            Controls.Add(ltbUsuarios);
+            Font = new Font("Microsoft New Tai Lue", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "ABMusuarios";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "ABMusuarios";
+            Load += ABMusuarios_Load;
+            grpModificarProd.ResumeLayout(false);
+            grpModificarProd.PerformLayout();
+            pnlBordeSuperior.ResumeLayout(false);
+            pnlBordeSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbMini).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptbSalir).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -262,5 +337,10 @@
         private ComboBox cbxCategoria;
         private Button btnVendedor;
         private Button btnClientes;
+        private Panel pnlBordeSuperior;
+        private Button btnVolver;
+        private PictureBox ptbMini;
+        private PictureBox ptbSalir;
+        private Label label5;
     }
 }

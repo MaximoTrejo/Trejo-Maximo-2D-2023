@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cinet\\Desktop\\Trejo-Maximo-2D-2023\\Entidades - Parcial Laboratorio\\Entidades - Parcial Laboratorio.csproj": {}
+    "C:\\Users\\maxim\\OneDrive\\Escritorio\\Trejo-Maximo-2D-2023\\Entidades - Parcial Laboratorio\\Entidades - Parcial Laboratorio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cinet\\Desktop\\Trejo-Maximo-2D-2023\\Entidades - Parcial Laboratorio\\Entidades - Parcial Laboratorio.csproj": {
+    "C:\\Users\\maxim\\OneDrive\\Escritorio\\Trejo-Maximo-2D-2023\\Entidades - Parcial Laboratorio\\Entidades - Parcial Laboratorio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cinet\\Desktop\\Trejo-Maximo-2D-2023\\Entidades - Parcial Laboratorio\\Entidades - Parcial Laboratorio.csproj",
+        "projectUniqueName": "C:\\Users\\maxim\\OneDrive\\Escritorio\\Trejo-Maximo-2D-2023\\Entidades - Parcial Laboratorio\\Entidades - Parcial Laboratorio.csproj",
         "projectName": "Entidades - Parcial Laboratorio",
-        "projectPath": "C:\\Users\\Cinet\\Desktop\\Trejo-Maximo-2D-2023\\Entidades - Parcial Laboratorio\\Entidades - Parcial Laboratorio.csproj",
-        "packagesPath": "C:\\Users\\Cinet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cinet\\Desktop\\Trejo-Maximo-2D-2023\\Entidades - Parcial Laboratorio\\obj\\",
+        "projectPath": "C:\\Users\\maxim\\OneDrive\\Escritorio\\Trejo-Maximo-2D-2023\\Entidades - Parcial Laboratorio\\Entidades - Parcial Laboratorio.csproj",
+        "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maxim\\OneDrive\\Escritorio\\Trejo-Maximo-2D-2023\\Entidades - Parcial Laboratorio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Cinet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,7 +45,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -54,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

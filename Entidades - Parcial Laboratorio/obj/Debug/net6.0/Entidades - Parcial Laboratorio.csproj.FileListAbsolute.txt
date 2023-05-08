@@ -22,3 +22,15 @@ C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\Entidades - Parcial Laboratorio\obj\
 C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\Entidades - Parcial Laboratorio\obj\Debug\net6.0\refint\Entidades - Parcial Laboratorio.dll
 C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\Entidades - Parcial Laboratorio\obj\Debug\net6.0\Entidades - Parcial Laboratorio.pdb
 C:\Users\Cinet\Desktop\Trejo-Maximo-2D-2023\Entidades - Parcial Laboratorio\obj\Debug\net6.0\ref\Entidades - Parcial Laboratorio.dll
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\Entidades - Parcial Laboratorio\bin\Debug\net6.0\Entidades - Parcial Laboratorio.deps.json
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\Entidades - Parcial Laboratorio\bin\Debug\net6.0\Entidades - Parcial Laboratorio.dll
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\Entidades - Parcial Laboratorio\bin\Debug\net6.0\Entidades - Parcial Laboratorio.pdb
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\Entidades - Parcial Laboratorio\obj\Debug\net6.0\Entidades - Parcial Laboratorio.csproj.AssemblyReference.cache
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\Entidades - Parcial Laboratorio\obj\Debug\net6.0\Entidades - Parcial Laboratorio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\Entidades - Parcial Laboratorio\obj\Debug\net6.0\Entidades - Parcial Laboratorio.AssemblyInfoInputs.cache
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\Entidades - Parcial Laboratorio\obj\Debug\net6.0\Entidades - Parcial Laboratorio.AssemblyInfo.cs
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\Entidades - Parcial Laboratorio\obj\Debug\net6.0\Entidades - Parcial Laboratorio.csproj.CoreCompileInputs.cache
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\Entidades - Parcial Laboratorio\obj\Debug\net6.0\Entidades - Parcial Laboratorio.dll
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\Entidades - Parcial Laboratorio\obj\Debug\net6.0\refint\Entidades - Parcial Laboratorio.dll
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\Entidades - Parcial Laboratorio\obj\Debug\net6.0\Entidades - Parcial Laboratorio.pdb
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\Entidades - Parcial Laboratorio\obj\Debug\net6.0\ref\Entidades - Parcial Laboratorio.dll

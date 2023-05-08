@@ -34,6 +34,8 @@ namespace _1er_ParcialLabo
 
             string usuario = ltbUsuarios.Text;
             Usuario usu = datos.buscarUsuario(usuario);
+            string tipo = cbxCategoria.Text;
+
             //Clientes clientes;
 
             tbxnombre.Text = usuario;
@@ -44,11 +46,12 @@ namespace _1er_ParcialLabo
                 clientes = (Clientes)usu;
                 txbImporte.Enabled = true;
                 txbImporte.Text = clientes.importe.ToString();
-
+                cbxCategoria.Text = Usuario.categoriaUsuarios(usu);
             }
             else
             {
                 txbImporte.Enabled = false;
+                cbxCategoria.Text = Usuario.categoriaUsuarios(usu);
             }
 
             // tbtStock.Text = producto.stock.ToString();
@@ -58,19 +61,40 @@ namespace _1er_ParcialLabo
         {
             string nombretxt = tbxnombre.Text;
             string Pass = tbxPass.Text;
-            double importe = Double.Parse(txbImporte.Text);
+            double importe;
             string tipo = cbxCategoria.Text;
             tipo = string.IsNullOrEmpty(tipo) ? null : tipo;
-            
 
-            if (datos.agregarUsuarios(nombretxt, Pass, usuarioLogeado, importe,tipo))
+            //Usuario usu = datos.buscarUsuario(nombretxt);
+
+            if (tipo == "Vendedor")
             {
-                MessageBox.Show("Se agrego correctamente");
-                ltbUsuarios.DataSource = datos.MostrarUsuarios();
+
+                //double importe = Double.Parse(txbImporte.Text);
+
+                if (datos.agregarVendedor(nombretxt, Pass, usuarioLogeado, tipo))
+                {
+                    MessageBox.Show("Se agrego correctamente");
+
+                }
+                else
+                {
+                    MessageBox.Show("No se agrego correctamente");
+                }
+
             }
             else
             {
-                MessageBox.Show("No se agrego correctamente");
+                importe = Double.Parse(txbImporte.Text);
+                if (datos.agregarUsuarios(nombretxt, Pass, usuarioLogeado, importe, tipo))
+                {
+                    MessageBox.Show("Se agrego correctamente");
+
+                }
+                else
+                {
+                    MessageBox.Show("No se agrego correctamente");
+                }
             }
         }
 
@@ -87,12 +111,20 @@ namespace _1er_ParcialLabo
             string nombretxt = tbxnombre.Text;
             string Pass = tbxPass.Text;
             double importe = Double.Parse(txbImporte.Text);
+            Usuario usu = datos.buscarUsuario(nombreUsuario);
 
 
             if (datos.modificarUsuarios(nombretxt, Pass, datos.buscarUsuario(nombreUsuario), importe))
             {
                 MessageBox.Show("se modifico");
-                ltbUsuarios.DataSource = datos.MostrarUsuarios();//recorro la lista otra ves y se mostraria el dato modificado 
+                if (usu.validarVendedor())
+                {
+                    ltbUsuarios.DataSource = datos.MostrarVendedores();
+                }
+                else
+                {
+                    ltbUsuarios.DataSource = datos.MostrarClientes();
+                }//recorro la lista otra ves y se mostraria el dato modificado 
             }
             else
             {
@@ -104,11 +136,20 @@ namespace _1er_ParcialLabo
         {
             string nombreUsuario;
             nombreUsuario = ltbUsuarios.Text;
+            Usuario usu = datos.buscarUsuario(nombreUsuario);
 
             if (datos.eliminarUsuario(datos.buscarUsuario(nombreUsuario)))
             {
                 MessageBox.Show("Se elimino correctamente");
-                ltbUsuarios.DataSource = datos.MostrarUsuarios();
+                if (usu.validarVendedor())
+                {
+                    ltbUsuarios.DataSource = datos.MostrarVendedores();
+                }
+                else
+                {
+                    ltbUsuarios.DataSource = datos.MostrarClientes();
+                }
+                //ltbUsuarios.DataSource = datos.MostrarUsuarios();
             }
             else
             {
@@ -126,20 +167,61 @@ namespace _1er_ParcialLabo
         private void btnVendedor_Click(object sender, EventArgs e)
         {
             ltbUsuarios.DataSource = datos.MostrarVendedores();
+
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            ltbUsuarios.DataSource = datos.MostrarUsuarios();
+            ltbUsuarios.DataSource = datos.MostrarClientes();
+
         }
 
-        private void grpModificarProd_Enter(object sender, EventArgs e)
+        //----------------------------------------------------------------------------------------
+        /// <summary>
+        /// Funciones para permitir la interacción con los elementos visuales de la ventana.
+        /// </summary>
+
+        public int m;
+        public int mx;
+        public int my;
+        private void pnlBordeSuperior_MouseDown(object sender, MouseEventArgs e)
         {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
 
+        private void pnlBordeSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+
+        private void pnlBordeSuperior_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
         }
 
 
+        private void ptbMini_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
 
+        private void ptbSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        //----------------------------------------------------------------------------------------
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Heladera heladera = new Heladera(datos, usuarioLogeado);
+            heladera.Show();
+            this.Hide();
+        }
     }
 }

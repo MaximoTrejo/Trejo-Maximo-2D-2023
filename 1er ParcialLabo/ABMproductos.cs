@@ -37,7 +37,7 @@ namespace _1er_ParcialLabo
         private void ABMproductos_Load(object sender, EventArgs e)
         {
             ltbProductos.DataSource = datos.MostrarPoducto();
- 
+
         }
 
 
@@ -50,7 +50,7 @@ namespace _1er_ParcialLabo
         /// <param name="e"></param>
         private void ltbProductos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string nombreProducto= ltbProductos.Text;
+            string nombreProducto = ltbProductos.Text;
             Producto producto = datos.buscarProductos(nombreProducto);
             tbxnombre.Text = nombreProducto;
             tbxPesoKilo.Text = producto.kilo.ToString();
@@ -65,7 +65,7 @@ namespace _1er_ParcialLabo
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnAceptar_Click(object sender, EventArgs e)
-        { 
+        {
             tbxnombre.Text = "";
             tbxPesoKilo.Text = "";
             txbPrecioKilo.Text = "";
@@ -84,7 +84,7 @@ namespace _1er_ParcialLabo
             double kilo = Double.Parse(tbxPesoKilo.Text);
             double precioKilo = Double.Parse(txbPrecioKilo.Text);
             double stock = Double.Parse(tbtStock.Text);
-           
+
 
             if (Producto.modificarProductos(datos.buscarProductos(nombrePducto), nombretxt, kilo, precioKilo, stock))
             {
@@ -118,7 +118,7 @@ namespace _1er_ParcialLabo
             }
             else
             {
-                MessageBox.Show("No se agrego correctamente"); 
+                MessageBox.Show("No se agrego correctamente");
             }
         }
 
@@ -154,30 +154,46 @@ namespace _1er_ParcialLabo
             heladera.Show();
             this.Hide();
         }
+        //----------------------------------------------------------------------------------------
+        /// <summary>
+        /// Funciones para permitir la interacción con los elementos visuales de la ventana.
+        /// </summary>
 
-        private void grpModificarProd_Enter(object sender, EventArgs e)
+        public int m;
+        public int mx;
+        public int my;
+        private void pnlBordeSuperior_MouseDown(object sender, MouseEventArgs e)
         {
-
+            m = 1;
+            mx = e.X;
+            my = e.Y;
         }
 
-        private void ABMproductos_Load_1(object sender, EventArgs e)
+        private void pnlBordeSuperior_MouseMove(object sender, MouseEventArgs e)
         {
-
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
         }
 
-        private void ltbProductos_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void pnlBordeSuperior_MouseUp(object sender, MouseEventArgs e)
         {
-
+            m = 0;
         }
 
-        private void tbxnombre_TextChanged(object sender, EventArgs e)
-        {
 
+        private void ptbMini_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnAceptar_Click_2(object sender, EventArgs e)
+        private void ptbSalir_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
+
+
+        //----------------------------------------------------------------------------------------
     }
 }

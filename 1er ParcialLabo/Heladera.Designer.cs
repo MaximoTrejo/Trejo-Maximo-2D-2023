@@ -28,194 +28,184 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Heladera));
-            this.btnVolver = new System.Windows.Forms.Button();
-            this.btnDetalle = new System.Windows.Forms.Button();
-            this.btnListaF = new System.Windows.Forms.Button();
-            this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.btnABMProd = new System.Windows.Forms.Button();
-            this.ltbProductos = new System.Windows.Forms.ListBox();
-            this.pnlBordeSuperior = new System.Windows.Forms.Panel();
-            this.ptbMini = new System.Windows.Forms.PictureBox();
-            this.ptbSalir = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
-            this.pnlBordeSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbMini)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbSalir)).BeginInit();
-            this.SuspendLayout();
+            btnVolver = new Button();
+            btnDetalle = new Button();
+            btnListaF = new Button();
+            dgvProductos = new DataGridView();
+            btnABMProd = new Button();
+            ltbProductos = new ListBox();
+            pnlBordeSuperior = new Panel();
+            ptbMini = new PictureBox();
+            ptbSalir = new PictureBox();
+            label5 = new Label();
+            button1 = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
+            pnlBordeSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbMini).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptbSalir).BeginInit();
+            SuspendLayout();
             // 
             // btnVolver
             // 
-            this.btnVolver.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnVolver.FlatAppearance.BorderSize = 0;
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnVolver.Location = new System.Drawing.Point(0, 6);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(59, 29);
-            this.btnVolver.TabIndex = 0;
-            this.btnVolver.Text = "<---";
-            this.btnVolver.UseVisualStyleBackColor = true;
+            btnVolver.FlatAppearance.BorderColor = Color.DarkGray;
+            btnVolver.FlatAppearance.BorderSize = 0;
+            btnVolver.FlatStyle = FlatStyle.Flat;
+            btnVolver.Font = new Font("Microsoft New Tai Lue", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnVolver.Location = new Point(0, 5);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(52, 23);
+            btnVolver.TabIndex = 0;
+            btnVolver.Text = "<---";
+            btnVolver.UseVisualStyleBackColor = true;
             // 
             // btnDetalle
             // 
-            this.btnDetalle.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDetalle.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDetalle.Location = new System.Drawing.Point(183, 157);
-            this.btnDetalle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDetalle.Name = "btnDetalle";
-            this.btnDetalle.Size = new System.Drawing.Size(144, 52);
-            this.btnDetalle.TabIndex = 2;
-            this.btnDetalle.Text = "Detalle";
-            this.btnDetalle.UseVisualStyleBackColor = true;
+            btnDetalle.FlatAppearance.BorderColor = Color.DarkGray;
+            btnDetalle.FlatStyle = FlatStyle.Flat;
+            btnDetalle.Font = new Font("Microsoft New Tai Lue", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDetalle.Location = new Point(160, 124);
+            btnDetalle.Name = "btnDetalle";
+            btnDetalle.Size = new Size(126, 41);
+            btnDetalle.TabIndex = 2;
+            btnDetalle.Text = "Detalle";
+            btnDetalle.UseVisualStyleBackColor = true;
             // 
             // btnListaF
             // 
-            this.btnListaF.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnListaF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListaF.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnListaF.Location = new System.Drawing.Point(334, 157);
-            this.btnListaF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnListaF.Name = "btnListaF";
-            this.btnListaF.Size = new System.Drawing.Size(182, 57);
-            this.btnListaF.TabIndex = 3;
-            this.btnListaF.Text = "Lista de facturacion";
-            this.btnListaF.UseVisualStyleBackColor = true;
+            btnListaF.FlatAppearance.BorderColor = Color.DarkGray;
+            btnListaF.FlatStyle = FlatStyle.Flat;
+            btnListaF.Font = new Font("Microsoft New Tai Lue", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnListaF.Location = new Point(292, 124);
+            btnListaF.Name = "btnListaF";
+            btnListaF.Size = new Size(159, 45);
+            btnListaF.TabIndex = 3;
+            btnListaF.Text = "Lista de facturacion";
+            btnListaF.UseVisualStyleBackColor = true;
             // 
             // dgvProductos
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(14, 49);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.ReadOnly = true;
-            this.dgvProductos.RowTemplate.Height = 25;
-            this.dgvProductos.Size = new System.Drawing.Size(502, 91);
-            this.dgvProductos.TabIndex = 4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.DarkGray;
+            dataGridViewCellStyle2.Font = new Font("Microsoft New Tai Lue", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProductos.Location = new Point(12, 39);
+            dgvProductos.Name = "dgvProductos";
+            dgvProductos.ReadOnly = true;
+            dgvProductos.RowTemplate.Height = 25;
+            dgvProductos.Size = new Size(439, 72);
+            dgvProductos.TabIndex = 4;
             // 
             // btnABMProd
             // 
-            this.btnABMProd.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnABMProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnABMProd.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnABMProd.Location = new System.Drawing.Point(14, 160);
-            this.btnABMProd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnABMProd.Name = "btnABMProd";
-            this.btnABMProd.Size = new System.Drawing.Size(150, 52);
-            this.btnABMProd.TabIndex = 5;
-            this.btnABMProd.Text = "ABM Productos";
-            this.btnABMProd.UseVisualStyleBackColor = true;
+            btnABMProd.FlatAppearance.BorderColor = Color.DarkGray;
+            btnABMProd.FlatStyle = FlatStyle.Flat;
+            btnABMProd.Font = new Font("Microsoft New Tai Lue", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnABMProd.Location = new Point(12, 126);
+            btnABMProd.Name = "btnABMProd";
+            btnABMProd.Size = new Size(131, 41);
+            btnABMProd.TabIndex = 5;
+            btnABMProd.Text = "ABM Productos";
+            btnABMProd.UseVisualStyleBackColor = true;
             // 
             // ltbProductos
             // 
-            this.ltbProductos.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ltbProductos.FormattingEnabled = true;
-            this.ltbProductos.ItemHeight = 17;
-            this.ltbProductos.Location = new System.Drawing.Point(534, 49);
-            this.ltbProductos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ltbProductos.Name = "ltbProductos";
-            this.ltbProductos.Size = new System.Drawing.Size(203, 140);
-            this.ltbProductos.TabIndex = 6;
+            ltbProductos.Font = new Font("Microsoft New Tai Lue", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            ltbProductos.FormattingEnabled = true;
+            ltbProductos.ItemHeight = 17;
+            ltbProductos.Location = new Point(467, 39);
+            ltbProductos.Name = "ltbProductos";
+            ltbProductos.Size = new Size(178, 106);
+            ltbProductos.TabIndex = 6;
             // 
             // pnlBordeSuperior
             // 
-            this.pnlBordeSuperior.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.pnlBordeSuperior.Controls.Add(this.ptbMini);
-            this.pnlBordeSuperior.Controls.Add(this.ptbSalir);
-            this.pnlBordeSuperior.Controls.Add(this.label5);
-            this.pnlBordeSuperior.Controls.Add(this.btnVolver);
-            this.pnlBordeSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlBordeSuperior.Location = new System.Drawing.Point(0, 0);
-            this.pnlBordeSuperior.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnlBordeSuperior.Name = "pnlBordeSuperior";
-            this.pnlBordeSuperior.Size = new System.Drawing.Size(751, 42);
-            this.pnlBordeSuperior.TabIndex = 17;
+            pnlBordeSuperior.BackColor = SystemColors.MenuBar;
+            pnlBordeSuperior.Controls.Add(ptbMini);
+            pnlBordeSuperior.Controls.Add(ptbSalir);
+            pnlBordeSuperior.Controls.Add(label5);
+            pnlBordeSuperior.Controls.Add(btnVolver);
+            pnlBordeSuperior.Dock = DockStyle.Top;
+            pnlBordeSuperior.Location = new Point(0, 0);
+            pnlBordeSuperior.Name = "pnlBordeSuperior";
+            pnlBordeSuperior.Size = new Size(657, 33);
+            pnlBordeSuperior.TabIndex = 17;
             // 
             // ptbMini
             // 
-            this.ptbMini.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ptbMini.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ptbMini.Image = ((System.Drawing.Image)(resources.GetObject("ptbMini.Image")));
-            this.ptbMini.Location = new System.Drawing.Point(645, 0);
-            this.ptbMini.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ptbMini.Name = "ptbMini";
-            this.ptbMini.Size = new System.Drawing.Size(45, 42);
-            this.ptbMini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbMini.TabIndex = 9;
-            this.ptbMini.TabStop = false;
+            ptbMini.BackColor = SystemColors.ControlLightLight;
+            ptbMini.Dock = DockStyle.Right;
+            ptbMini.Image = (Image)resources.GetObject("ptbMini.Image");
+            ptbMini.Location = new Point(565, 0);
+            ptbMini.Name = "ptbMini";
+            ptbMini.Size = new Size(39, 33);
+            ptbMini.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptbMini.TabIndex = 9;
+            ptbMini.TabStop = false;
             // 
             // ptbSalir
             // 
-            this.ptbSalir.BackColor = System.Drawing.SystemColors.Control;
-            this.ptbSalir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ptbSalir.Image = global::_1er_ParcialLabo.Properties.Resources.salir;
-            this.ptbSalir.Location = new System.Drawing.Point(690, 0);
-            this.ptbSalir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ptbSalir.Name = "ptbSalir";
-            this.ptbSalir.Size = new System.Drawing.Size(61, 42);
-            this.ptbSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbSalir.TabIndex = 8;
-            this.ptbSalir.TabStop = false;
+            ptbSalir.BackColor = SystemColors.Control;
+            ptbSalir.Dock = DockStyle.Right;
+            ptbSalir.Image = Properties.Resources.salir;
+            ptbSalir.Location = new Point(604, 0);
+            ptbSalir.Name = "ptbSalir";
+            ptbSalir.Size = new Size(53, 33);
+            ptbSalir.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptbSalir.TabIndex = 8;
+            ptbSalir.TabStop = false;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(59, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 19);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Menu Heladera";
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft YaHei UI", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label5.Location = new Point(52, 9);
+            label5.Name = "label5";
+            label5.Size = new Size(71, 19);
+            label5.TabIndex = 0;
+            label5.Text = "Heladera";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(327, 148);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            button1.Location = new Point(286, 117);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(66, 18);
+            button1.TabIndex = 18;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // Heladera
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(751, 222);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pnlBordeSuperior);
-            this.Controls.Add(this.ltbProductos);
-            this.Controls.Add(this.btnABMProd);
-            this.Controls.Add(this.dgvProductos);
-            this.Controls.Add(this.btnListaF);
-            this.Controls.Add(this.btnDetalle);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Heladera";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Heladera";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
-            this.pnlBordeSuperior.ResumeLayout(false);
-            this.pnlBordeSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbMini)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbSalir)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.AppWorkspace;
+            ClientSize = new Size(657, 175);
+            Controls.Add(button1);
+            Controls.Add(pnlBordeSuperior);
+            Controls.Add(ltbProductos);
+            Controls.Add(btnABMProd);
+            Controls.Add(dgvProductos);
+            Controls.Add(btnListaF);
+            Controls.Add(btnDetalle);
+            FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "Heladera";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Heladera";
+            ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
+            pnlBordeSuperior.ResumeLayout(false);
+            pnlBordeSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbMini).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptbSalir).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
