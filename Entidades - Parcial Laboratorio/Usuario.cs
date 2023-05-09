@@ -60,5 +60,15 @@ namespace Entidades___Parcial_Laboratorio
 
         
 
+
+
+        
+
+
+       
+
+
+        
+
     }
 }

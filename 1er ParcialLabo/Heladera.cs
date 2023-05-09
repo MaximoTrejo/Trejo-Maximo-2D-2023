@@ -107,19 +107,6 @@ namespace _1er_ParcialLabo
             ltbProductos.DataSource = datos.MostrarPoducto();
         }
 
-        /// <summary>
-        /// El método "btnModificar_Click" es un controlador de eventos que muestra un formulario de "ABMproductos" con los datos y el usuario pasados como parámetros y oculta el formulario actual.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-
-            ABMproductos aBMproductos = new ABMproductos(datos, usuarioLogeado);
-            aBMproductos.Show();
-            this.Hide();
-
-        }
 
         /// <summary>
         /// El método "btnListaF_Click" es un controlador de eventos que muestra un formulario de "listadoFacturacion" con los datos y el usuario pasados como parámetros y oculta el formulario actual.
@@ -137,6 +124,18 @@ namespace _1er_ParcialLabo
         {
             ABMusuarios aBMusuarios = new ABMusuarios(datos, usuarioLogeado);
             aBMusuarios.Show();
+            this.Hide();
+        }
+
+        /// <summary>
+        /// El método "btnModificar_Click" es un controlador de eventos que muestra un formulario de "ABMproductos" con los datos y el usuario pasados como parámetros y oculta el formulario actual.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnABMProd_Click(object sender, EventArgs e)
+        {
+            ABMproductos aBMproductos = new ABMproductos(datos, usuarioLogeado);
+            aBMproductos.Show();
             this.Hide();
         }
     }

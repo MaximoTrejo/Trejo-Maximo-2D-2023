@@ -27,6 +27,76 @@ namespace Entidades___Parcial_Laboratorio
             return true;
         }
 
+        /// <summary>
+        /// Agrega un vendedor a la lista de usuarios 
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="pass"></param>
+        /// <param name="usuario"></param>
+        /// <param name="tipo"></param>
+        /// <returns></returns>
+        public static bool agregarVendedor(string nombre, string pass, Usuario usuario, string tipo)
+        {
+            bool retorno = false;
+
+            if (nombre != null && pass != null)
+            {
+                if (tipo == "Vendedor")
+                {
+                    HarcodeoDatos.Usuarios.Add(new Vendedor(nombre, pass));
+                    retorno = true;
+                }
+            }
+            return retorno;
+        }
+
+
+        /// <summary>
+        /// Modifica el vendedor
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="pass"></param>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
+        public static bool modificarVendedor(string nombre, string pass, Usuario usuario)
+        {
+            bool retorno = false;
+
+            Clientes clientes;
+
+            if (usuario is not null)
+            {
+                usuario.Email = nombre;
+                usuario.Pass = pass;
+                retorno = true;
+
+            }
+
+            return retorno;
+        }
+
+        /// <summary>
+        /// Muestra solo una lista de los vendedores
+        /// </summary>
+        /// <returns></returns>
+        public static List<string> MostrarVendedores()
+        {
+            List<string> vend = new List<string>();
+
+            foreach (Usuario i in HarcodeoDatos.Usuarios)
+            {
+
+                if (i is not null)
+                {
+                    if (i.validarVendedor())
+                    {
+                        vend.Add(i.Email);
+                    }
+
+                }
+            }
+            return vend;
+        }
 
     }
 }

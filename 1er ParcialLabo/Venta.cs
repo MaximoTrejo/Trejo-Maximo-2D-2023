@@ -165,7 +165,7 @@ namespace _1er_ParcialLabo
                     importe = Usuario.buscarImporte(usuario);
                     lblImporte.Text = importe.ToString();
                     lblCategoria.Text = Usuario.categoriaUsuarios(usuario);
-                    usuarioLogeado = usuario;
+                    //usuarioLogeado = usuario;
                 }
                 else
                 {
@@ -195,10 +195,13 @@ namespace _1er_ParcialLabo
             string medioPago = cbxMediosPago.Text;
             medioPago = string.IsNullOrEmpty(medioPago) ? null : medioPago;
             int cantProducto = (int)nudStock.Value;
+
+            string categoriaDetalle = lblCategoria.Text;
+
             Producto producto;
 
 
-            if (!(usuarioLogeado.validarVendedor()))
+            if (categoriaDetalle == "Clientes")
             {
                 producto = datos.buscarProductos(productoBuscado);
 
@@ -209,7 +212,6 @@ namespace _1er_ParcialLabo
                     {
                         if (medioPago != null)
                         {
-                            MessageBox.Show(medioPago);
 
                             if (MessageBox.Show(producto.Mostrar(), "Confirme el producto", MessageBoxButtons.YesNo) == DialogResult.Yes)
                             {

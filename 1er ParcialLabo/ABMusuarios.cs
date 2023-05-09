@@ -14,29 +14,31 @@ namespace _1er_ParcialLabo
 {
     public partial class ABMusuarios : Form
     {
+        /// <summary>
+        /// El propósito de esta clase es la gestión de usuarios en una aplicación.
+        /// </summary>
         HarcodeoDatos datos;
         Usuario usuarioLogeado;
         public ABMusuarios(HarcodeoDatos datos, Usuario usuario)
         {
-
             InitializeComponent();
             this.datos = datos;
             this.usuarioLogeado = usuario;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Si el usuario seleccionado es un cliente, 
+        /// se habilita el campo de importe y se muestra el importe del cliente. 
+        /// En caso contrario, se deshabilita el campo de importe. 
+        /// Finalmente, se deshabilita la lista desplegable de tipos de usuario (cbxCategoria) para evitar que el usuario cambie su propio tipo.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ltbUsuarios_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             string usuario = ltbUsuarios.Text;
             Usuario usu = datos.buscarUsuario(usuario);
             string tipo = cbxCategoria.Text;
-
-            //Clientes clientes;
 
             tbxnombre.Text = usuario;
             tbxPass.Text = usu.Pass.ToString();
@@ -53,103 +55,197 @@ namespace _1er_ParcialLabo
                 txbImporte.Enabled = false;
                 cbxCategoria.Text = Usuario.categoriaUsuarios(usu);
             }
-
-            // tbtStock.Text = producto.stock.ToString();
+            cbxCategoria.Enabled = false;
         }
 
+        /// <summary>
+        /// Si el nombre de usuario es válido, la contraseña no está vacía y el tipo de usuario es "Vendedor", se agrega un nuevo vendedor a la fuente de datos.
+        /// Si se agrega correctamente, se muestra un mensaje de confirmación. En caso contrario, se muestra un mensaje de error.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             string nombretxt = tbxnombre.Text;
             string Pass = tbxPass.Text;
             double importe;
             string tipo = cbxCategoria.Text;
+
             tipo = string.IsNullOrEmpty(tipo) ? null : tipo;
 
-            //Usuario usu = datos.buscarUsuario(nombretxt);
+            if (ValidacionesABM.ValidarString(nombretxt)) {
 
-            if (tipo == "Vendedor")
-            {
+                if (!string.IsNullOrEmpty(Pass)) { 
 
-                //double importe = Double.Parse(txbImporte.Text);
+                     if (tipo == "Vendedor")
+                     {
+                        if (Vendedor.agregarVendedor(nombretxt, Pass, usuarioLogeado, tipo))
+                        {
+                           MessageBox.Show("Se agrego correctamente");
 
-                if (datos.agregarVendedor(nombretxt, Pass, usuarioLogeado, tipo))
-                {
-                    MessageBox.Show("Se agrego correctamente");
+                        }
+                        else
+                        {
+                           MessageBox.Show("No se agrego correctamente");
+                        }
+                     }
+                     else
+                     {
+                         txbImporte.Enabled = true;
+                                
+                        if (ValidacionesABM.ValidarDouble(txbImporte.Text))
+                        {
+                            importe = Double.Parse(txbImporte.Text);
 
+                            if (ValidacionesABM.ValidarMonto(importe))
+                            {
+
+                                if (Clientes.agregarClientes(nombretxt, Pass, usuarioLogeado, importe, tipo))
+                                {
+                                    MessageBox.Show("Se agrego correctamente");
+
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No se agrego correctamente");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("El importe debe ser menor a 100.000", "Aviso");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("No completo el importe", "Aviso");
+                        }
+                                            
+                     }
                 }
                 else
                 {
-                    MessageBox.Show("No se agrego correctamente");
+                    MessageBox.Show("No completo la Contraseña", "Aviso");
                 }
-
             }
             else
             {
-                importe = Double.Parse(txbImporte.Text);
-                if (datos.agregarUsuarios(nombretxt, Pass, usuarioLogeado, importe, tipo))
-                {
-                    MessageBox.Show("Se agrego correctamente");
-
-                }
-                else
-                {
-                    MessageBox.Show("No se agrego correctamente");
-                }
+                MessageBox.Show("No completo el nombre","Aviso");
             }
         }
 
+        /// <summary>
+        /// El método comienza asignando valores vacíos a los campos de nombre de usuario, contraseña e importe. Luego, deshabilita el campo de selección de categoría.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             tbxnombre.Text = "";
             tbxPass.Text = "";
             txbImporte.Text = "";
+            cbxCategoria.Enabled = false;
         }
 
+
+        /// <summary>
+        /// Obtiene los datos ingresados por el usuario en los campos de texto y el valor seleccionado en el cuadro de lista de usuarios. 
+        /// Luego, valida los datos y realiza la modificación del usuario en la lista de datos utilizando los métodos correspondientes de la clase Datos.
+        /// Si la modificación es exitosa, se actualiza el cuadro de lista de usuarios para mostrar el cambio. Si no, se muestra un mensaje de error.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnModificar_Click(object sender, EventArgs e)
         {
             string nombreUsuario = ltbUsuarios.Text;
             string nombretxt = tbxnombre.Text;
             string Pass = tbxPass.Text;
-            double importe = Double.Parse(txbImporte.Text);
+            double importe;
+
+            string tipo = cbxCategoria.Text;
+            tipo = string.IsNullOrEmpty(tipo) ? null : tipo;
+
             Usuario usu = datos.buscarUsuario(nombreUsuario);
 
-
-            if (datos.modificarUsuarios(nombretxt, Pass, datos.buscarUsuario(nombreUsuario), importe))
+            if (ValidacionesABM.ValidarString(nombretxt))
             {
-                MessageBox.Show("se modifico");
-                if (usu.validarVendedor())
+                if (!string.IsNullOrEmpty(Pass))
                 {
-                    ltbUsuarios.DataSource = datos.MostrarVendedores();
+                    if (tipo == "Vendedor")
+                    {
+                        if (Vendedor.modificarVendedor(nombretxt, Pass, datos.buscarUsuario(nombreUsuario)))
+                        {
+                            ltbUsuarios.DataSource = Vendedor.MostrarVendedores();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se modifico", "Error");
+                        }
+                    }
+                    else
+                    {
+                        txbImporte.Enabled = true;
+
+                        if (ValidacionesABM.ValidarDouble(txbImporte.Text))
+                        {
+                            importe = Double.Parse(txbImporte.Text);
+
+                            if (ValidacionesABM.ValidarMonto(importe))
+                            {
+                                if (Clientes.modificarClientes(nombretxt, Pass, datos.buscarUsuario(nombreUsuario), importe))
+                                {
+                                    MessageBox.Show("Se modifico", "Confirmacion");
+                                    ltbUsuarios.DataSource = Clientes.MostrarClientes();//recorro la lista otra ves y se mostraria el dato modificado 
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No se modifico", "Error");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("El importe debe ser menor a 100.000", "Aviso");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("No completo el importe", "Aviso");
+                        }
+                    }
                 }
                 else
                 {
-                    ltbUsuarios.DataSource = datos.MostrarClientes();
-                }//recorro la lista otra ves y se mostraria el dato modificado 
+                    MessageBox.Show("No completo la Contraseña", "Aviso");
+                }
             }
             else
             {
-                MessageBox.Show("no se modifico");
+                MessageBox.Show("No completo el nombre", "Aviso");
             }
         }
 
+
+        /// <summary>
+        /// este método se encarga de eliminar un usuario seleccionado de la lista de usuarios y actualizar la interfaz de usuario correspondiente.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             string nombreUsuario;
             nombreUsuario = ltbUsuarios.Text;
             Usuario usu = datos.buscarUsuario(nombreUsuario);
 
-            if (datos.eliminarUsuario(datos.buscarUsuario(nombreUsuario)))
+            if (Clientes.eliminarCliente(datos.buscarUsuario(nombreUsuario)))
             {
                 MessageBox.Show("Se elimino correctamente");
                 if (usu.validarVendedor())
                 {
-                    ltbUsuarios.DataSource = datos.MostrarVendedores();
+                    ltbUsuarios.DataSource = Vendedor.MostrarVendedores();
                 }
                 else
                 {
-                    ltbUsuarios.DataSource = datos.MostrarClientes();
+                    ltbUsuarios.DataSource = Clientes.MostrarClientes();
                 }
-                //ltbUsuarios.DataSource = datos.MostrarUsuarios();
             }
             else
             {
@@ -157,23 +253,37 @@ namespace _1er_ParcialLabo
             }
         }
 
+
+        /// <summary>
+        /// El método ABMusuarios_Load es un evento que se dispara al cargar el formulario ABMusuarios.
+        /// En este caso, agrega dos elementos al combobox cbxCategoria, que corresponden a las categorías de usuarios Cliente y Vendedor.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ABMusuarios_Load(object sender, EventArgs e)
-        {
-            //ltbUsuarios.DataSource = datos.MostrarUsuarios();
+        {  
             cbxCategoria.Items.Add(CategoriaUsuarios.Cliente);
             cbxCategoria.Items.Add(CategoriaUsuarios.Vendedor);
         }
 
+        /// <summary>
+        /// Este método se encarga de mostrar en un ListBox todos los usuarios de tipo vendedor que existen en la lista de usuarios que maneja la aplicación. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnVendedor_Click(object sender, EventArgs e)
         {
-            ltbUsuarios.DataSource = datos.MostrarVendedores();
-
+            ltbUsuarios.DataSource = Vendedor.MostrarVendedores();
         }
 
+        /// <summary>
+        /// Su función es mostrar en la lista de usuarios todos los clientes registrados en el sistema utilizando el método "MostrarClientes()" de la clase "DatosUsuarios"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            ltbUsuarios.DataSource = datos.MostrarClientes();
-
+            ltbUsuarios.DataSource = Clientes.MostrarClientes();
         }
 
         //----------------------------------------------------------------------------------------
@@ -217,6 +327,11 @@ namespace _1er_ParcialLabo
 
         //----------------------------------------------------------------------------------------
 
+        /// <summary>
+        /// Este método abre la ventana "Heladera" y oculta la ventana actual, pasando la lista de usuarios y el usuario logueado como parámetros.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnVolver_Click(object sender, EventArgs e)
         {
             Heladera heladera = new Heladera(datos, usuarioLogeado);

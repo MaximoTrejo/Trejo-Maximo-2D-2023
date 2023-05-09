@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace Entidades___Parcial_Laboratorio
 {
     public class Clientes : Usuario
     {
+
 
         /// <summary>
         /// Clase llamada "Clientes" que tiene un campo "importe" y un constructor que acepta tres parámetros: "Email", "Pass" e "importe"
@@ -93,6 +95,104 @@ namespace Entidades___Parcial_Laboratorio
             return retorno;
         }
 
+        /// <summary>
+        /// Muestra solo una lista de clientes
+        /// </summary>
+        /// <returns></returns>
+        public static List<string> MostrarClientes()
+        {
+            List<string> cli = new List<string>();
 
+            foreach (Usuario i in HarcodeoDatos.Usuarios)
+            {
+
+                if (i is not null)
+                {
+                    if (!(i.validarVendedor()))
+                    {
+                        cli.Add(i.Email);
+                    }
+
+                }
+            }
+            return cli;
+        }
+
+        /// <summary>
+        /// Modifica los clientes 
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="pass"></param>
+        /// <param name="usuario"></param>
+        /// <param name="importe"></param>
+        /// <returns></returns>
+        public static bool modificarClientes(string nombre, string pass, Usuario usuario, double importe)
+        {
+            bool retorno = false;
+
+            Clientes clientes;
+
+            if (usuario is not null)
+            {
+                if (usuario.validarVendedor())
+                {
+                    usuario.Email = nombre;
+                    usuario.Pass = pass;
+                    retorno = true;
+                }
+                else
+                {
+                    clientes = (Clientes)usuario;
+                    clientes.Email = nombre;
+                    clientes.Pass = pass;
+                    clientes.importe = importe;
+                    retorno = true;
+                }
+
+            }
+
+            return retorno;
+        }
+
+        /// <summary>
+        /// elimina clientes de la lista usuarios
+        /// </summary>
+        /// <param name="usu"></param>
+        /// <returns></returns>
+        public static bool eliminarCliente(Usuario usu)
+        {
+            bool retorno = false;
+
+            if (usu is not null)
+            {
+                HarcodeoDatos.Usuarios.Remove(usu);
+                retorno = true;
+            }
+            return retorno;
+        }
+
+        /// <summary>
+        /// agrega clientes a la lista de usuarios
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="pass"></param>
+        /// <param name="usuario"></param>
+        /// <param name="importe"></param>
+        /// <param name="tipo"></param>
+        /// <returns></returns>
+        public static bool agregarClientes(string nombre, string pass, Usuario usuario, double importe, string tipo)
+        {
+            bool retorno = false;
+
+            if (nombre != null && pass != null)
+            {
+
+                HarcodeoDatos.Usuarios.Add(new Clientes(nombre, pass, importe)); ;
+                retorno = true;
+
+
+            }
+            return retorno;
+        }
     }
 }

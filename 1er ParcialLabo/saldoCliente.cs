@@ -79,21 +79,40 @@ namespace _1er_ParcialLabo
         {
             double importeCliente;
 
-            importeCliente = double.Parse(tbxImporteCliente.Text);
+            //importeCliente = double.Parse(tbxImporteCliente.Text);
 
-            if (Clientes.cargarImporte(usuarioLogeado, importeCliente))
-            {
+            if (ValidacionesABM.ValidarDouble(tbxImporteCliente.Text)) {
 
-                Venta venta = new Venta(datos, usuarioLogeado, importeCliente);
-                venta.Show();
-                this.Hide();
+                importeCliente = double.Parse(tbxImporteCliente.Text);
+
+                if (ValidacionesABM.ValidarMonto(importeCliente))
+                {
+                    if (Clientes.cargarImporte(usuarioLogeado, importeCliente))
+                    {
+
+                        Venta venta = new Venta(datos, usuarioLogeado, importeCliente);
+                        venta.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al cargar importe", "Error");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El importe maximo es de 100.000", "Error");
+                }
+
+                        
             }
             else
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Error no completo el importe","Error");
             }
-
         }
+
+        
 
         /// <summary>
         /// Este es un método que maneja el evento "KeyPress" del cuadro de texto "txtDni".
