@@ -111,7 +111,7 @@ namespace _1er_ParcialLabo
                 && facturaciones[posicion].Cantidades.Count == facturaciones[posicion].Cantidades.Count)
             {
                 //MessageBox.Show("No hay mas facturas", "Error");
-                for (int i = 0; i < facturaciones[posicion].Cantidades.Count; i++)
+                for (int i = 0; i < facturaciones[posicion].nombreProductos.Count; i++)
                 {
                     dgvFacturacion.Rows.Add(facturaciones[posicion].nombreProductos[i], facturaciones[posicion].Cantidades[i], facturaciones[posicion].PrecioUnidad[i], facturaciones[posicion].Cantidades[i] * facturaciones[posicion].PrecioUnidad[i]);
                 }
