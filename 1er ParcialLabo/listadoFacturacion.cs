@@ -46,6 +46,8 @@ namespace _1er_ParcialLabo
             dgvFacturacion.Columns.Add("cantidad", "cantidad");
             dgvFacturacion.Columns.Add("PrecioUnidad", "PrecioUnidad");
             dgvFacturacion.Columns.Add("Preciototal", "PrecioTotal");
+
+
             //actualizo el formulario
             actualizarForm();
         }
@@ -108,7 +110,8 @@ namespace _1er_ParcialLabo
                 && facturaciones[posicion].nombreProductos.Count == facturaciones[posicion].PrecioUnidad.Count
                 && facturaciones[posicion].Cantidades.Count == facturaciones[posicion].Cantidades.Count)
             {
-                for (int i = 0; i < facturaciones[posicion].nombreProductos.Count; i++)
+                //MessageBox.Show("No hay mas facturas", "Error");
+                for (int i = 0; i < facturaciones[posicion].Cantidades.Count; i++)
                 {
                     dgvFacturacion.Rows.Add(facturaciones[posicion].nombreProductos[i], facturaciones[posicion].Cantidades[i], facturaciones[posicion].PrecioUnidad[i], facturaciones[posicion].Cantidades[i] * facturaciones[posicion].PrecioUnidad[i]);
                 }

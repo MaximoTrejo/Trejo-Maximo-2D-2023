@@ -134,6 +134,8 @@ namespace _1er_ParcialLabo
             dgvProductosVenta.Columns.Add("Kilo", "Kilo");
             dgvProductosVenta.Columns.Add("Precio", "Precio");
 
+            dgvProductosVenta.AllowUserToAddRows = false;
+
             cbxMediosPago.Items.Add(MediosPago.Efectivo);
             cbxMediosPago.Items.Add(MediosPago.Credito);
 
