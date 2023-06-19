@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.Metrics;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -180,7 +180,7 @@ namespace Entidades___Parcial_Laboratorio
         /// <param name="importe"></param>
         /// <param name="tipo"></param>
         /// <returns></returns>
-        public static bool agregarClientes(string nombre, string pass, Usuario usuario, double importe, string tipo)
+        public static bool agregarClientes(string nombre, string pass, Usuario usuario, double importe)
         {
             bool retorno = false;
 
@@ -193,6 +193,14 @@ namespace Entidades___Parcial_Laboratorio
 
             }
             return retorno;
+        }
+
+
+        public static explicit operator Clientes(SqlDataReader v)
+        {
+
+            Clientes u = new(v["cli_mail"].ToString(), v["cli_clave"].ToString(), Convert.ToInt32(v["cli_importe"]));
+            return u;
         }
     }
 }

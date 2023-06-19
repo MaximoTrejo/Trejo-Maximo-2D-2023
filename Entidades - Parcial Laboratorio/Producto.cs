@@ -24,6 +24,7 @@ namespace Entidades___Parcial_Laboratorio
             this.precioKilo = precioKilo;
             this.stock = stock;
         }
+        public Producto(){}
 
         /// <summary>
         /// Este método llamado "Mostrar" devuelve una cadena de texto que representa una descripción del objeto de la clase "Producto".

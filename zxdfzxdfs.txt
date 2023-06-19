@@ -1,0 +1,14 @@
+string para que me devuelva el tipo
+
+gettype (tipo objeto)
+
+typeof(el objeto que quiero saber si es de la misma clase)  
+
+switch validando que tipo es y dependiendo de eso me voy al menu que corrsponda 
+
+
+
+---------------------------------
+devulvo una persona 
+lo recorro 
+valido en la misma fila que los datos que argo por parametros (lo que mando , los que cargo)

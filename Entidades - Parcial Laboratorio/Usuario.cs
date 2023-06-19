@@ -22,6 +22,8 @@ namespace Entidades___Parcial_Laboratorio
 
         /// <summary>
         /// funcion que valida que un vendedor sea del tipo vendedor
+        /// 
+        /// if(usuario is Vendedor vendedor)
         /// </summary>
         /// <returns></returns>
         public virtual bool validarVendedor()

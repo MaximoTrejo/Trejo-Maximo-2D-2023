@@ -1,0 +1,35 @@
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Release\net6.0-windows\1er ParcialLabo.exe
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Release\net6.0-windows\1er ParcialLabo.deps.json
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Release\net6.0-windows\1er ParcialLabo.runtimeconfig.json
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Release\net6.0-windows\1er ParcialLabo.dll
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Release\net6.0-windows\1er ParcialLabo.pdb
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Release\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Release\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Release\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Release\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Release\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Release\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Release\net6.0-windows\Entidades - Parcial Laboratorio.dll
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Release\net6.0-windows\Entidades - Parcial Laboratorio.pdb
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\1er ParcialLabo.csproj.AssemblyReference.cache
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\_1er_ParcialLabo.ABMproductos.resources
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\_1er_ParcialLabo.ABMusuarios.resources
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\_1er_ParcialLabo.saldoCliente.resources
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\_1er_ParcialLabo.Heladera.resources
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\_1er_ParcialLabo.listadoFacturacion.resources
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\_1er_ParcialLabo.menuVendedor.resources
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\_1er_ParcialLabo.Login.resources
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\_1er_ParcialLabo.Venta.resources
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\_1er_ParcialLabo.Properties.Resources.resources
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\1er ParcialLabo.csproj.GenerateResource.cache
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\1er ParcialLabo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\1er ParcialLabo.AssemblyInfoInputs.cache
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\1er ParcialLabo.AssemblyInfo.cs
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\1er ParcialLabo.csproj.CoreCompileInputs.cache
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\1er ParcialLabo.csproj.CopyComplete
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\1er ParcialLabo.dll
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\refint\1er ParcialLabo.dll
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\1er ParcialLabo.pdb
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\1er ParcialLabo.genruntimeconfig.cache
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\obj\Release\net6.0-windows\ref\1er ParcialLabo.dll
+C:\Users\maxim\OneDrive\Escritorio\Trejo-Maximo-2D-2023\1er ParcialLabo\bin\Release\net6.0-windows\Newtonsoft.Json.dll

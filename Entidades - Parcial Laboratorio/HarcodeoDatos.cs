@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _1er_ParcialLabo.BDD;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,8 +23,9 @@ namespace Entidades___Parcial_Laboratorio
 
         public  List<Producto> CarritoCompra = new List<Producto>();
 
-        public static List<Facturacion> encabezadoTicket ;
+        public static List<Facturacion> encabezadoTicket;
 
+        public static List<string> strings = new List<string>();
 
         /// <summary>
         /// Harcodeo de Usuarios y Productos
@@ -33,35 +35,40 @@ namespace Entidades___Parcial_Laboratorio
             encabezadoTicket= new List<Facturacion>();
 
             cargadoTicket();
+            
 
-            Usuario cli1 = new Clientes ("mail1@gmail,com", "11111", 120);
-            Usuario cli2 = new Clientes("mail2@gmail,com", "11111", 520);
-            Usuario cli3 = new Clientes("mail3@gmaill,com", "11111", 20);
-            Usuario cli4 = new Clientes("mail4@gmail,com", "11111", 0);
-            Usuario cli5 = new Clientes("mail5@gmail,com", "11111", 38);
-            Usuario vendedor1 = new Vendedor ( "admin1@gmail,com", "22222" );
-            Usuario vendedor2 = new Vendedor("admin2@gmail,com", "22222");
-            Usuario vendedor3 = new Vendedor("admin3@gmail,com", "22222");
-            Usuario vendedor4 = new Vendedor("admin4@gmail,com", "22222");
-            Usuario vendedor5 = new Vendedor("admin5@gmail,com", "22222");
+            //Usuario cli1 = new Clientes ("mail1@gmail,com", "11111", 120);
+            //Usuario cli2 = new Clientes("mail2@gmail,com", "11111", 520);
+            //Usuario cli3 = new Clientes("mail3@gmaill,com", "11111", 20);
+            //Usuario cli4 = new Clientes("mail4@gmail,com", "11111", 0);
+            //Usuario cli5 = new Clientes("mail5@gmail,com", "11111", 38);
+            //Usuario vendedor1 = new Vendedor ( "admin1@gmail,com", "22222" );
+            //Usuario vendedor2 = new Vendedor("admin2@gmail,com", "22222");
+            //Usuario vendedor3 = new Vendedor("admin3@gmail,com", "22222");
+            //Usuario vendedor4 = new Vendedor("admin4@gmail,com", "22222");
+            //Usuario vendedor5 = new Vendedor("admin5@gmail,com", "22222");
 
-            Usuarios.Add(cli1);
-            Usuarios.Add(cli2);
-            Usuarios.Add(cli3);
-            Usuarios.Add(cli4);
-            Usuarios.Add(cli5);
+            //Usuarios.Add(cli1);
+            //Usuarios.Add(cli2);
+            //Usuarios.Add(cli3);
+            //Usuarios.Add(cli4);
+            //Usuarios.Add(cli5);
 
-            Usuarios.Add(vendedor1);
-            Usuarios.Add(vendedor2);
-            Usuarios.Add(vendedor3);
-            Usuarios.Add(vendedor4);
-            Usuarios.Add(vendedor5);
+            //Usuarios.Add(vendedor1);
+            //Usuarios.Add(vendedor2);
+            //Usuarios.Add(vendedor3);
+            //Usuarios.Add(vendedor4);
+            //Usuarios.Add(vendedor5);
 
-            Producto.Add(new Producto ("Carne", 5, 100, 5 ));
-            Producto.Add(new Producto ("Pollo", 2,120, 2 ));
-            Producto.Add(new Producto("Vacio", 6, 20, 3));
-            Producto.Add(new Producto("Chorizo", 1, 19, 6));
-            Producto.Add(new Producto("Morcilla", 10, 5, 10));
+            //Producto.Add(new Producto ("Carne", 5, 100, 5 ));
+            //Producto.Add(new Producto ("Pollo", 2,120, 2 ));
+            //Producto.Add(new Producto("Vacio", 6, 20, 3));
+            //Producto.Add(new Producto("Chorizo", 1, 19, 6));
+            //Producto.Add(new Producto("Morcilla", 10, 5, 10));
+
+            cargarClientesList();
+            cargarVendedoresList();
+
 
         }
         /// <summary>
@@ -324,6 +331,80 @@ namespace Entidades___Parcial_Laboratorio
 
 
             return retorno;
+        }
+
+        //base de datos
+        private static void cargarClientesList()
+        {
+            var listClientes = ClientesBDD.traerCliente();
+            
+            foreach (var item in listClientes)
+            {
+                Usuarios.Add(item);
+            }
+
+
+        }
+
+        private static void cargarVendedoresList()
+        {
+            var listVendedores = VendedoresBDD.traerVendedor();
+
+            foreach (var item in listVendedores)
+            {
+                Usuarios.Add(item);
+            }
+
+
+        }
+
+
+        public List<Producto> listaProducto()
+        {
+            List<Producto> prod = new List<Producto>();
+
+            foreach (Producto i in Producto)
+            {
+                if (i is not null)
+                {
+                    prod.Add(i);
+                }
+            }
+            return prod;
+        }
+
+        public List<Producto> CargarlistaProducto(List<Producto> json)
+        {
+            Producto = json;
+            //Console.WriteLine(Producto[1]);
+            return Producto;
+        }
+
+       
+        public static string  ObtenerDatosFacturacion(List<Facturacion> listaFacturacion)
+        {
+            List<string> datosFacturacion = new List<string>();
+
+            foreach (Facturacion factura in listaFacturacion)
+            {
+                string datos = $"Email: {factura.Email}, Precio Total: {factura.PrecioTotal}";
+
+                // Concatenar los datos de cada producto
+                for (int i = 0; i < factura.nombreProductos.Count; i++)
+                {
+                    string producto = factura.nombreProductos[i];
+                    int cantidad = factura.Cantidades[i];
+                    int precioUnidad = factura.PrecioUnidad[i];
+
+                    string datosProducto = $"\nProducto: {producto}, Cantidad: {cantidad}, Precio Unidad: {precioUnidad}";
+                    datos += datosProducto;
+                }
+
+                datos += "\n"; // Agregar una línea vacía al final del bloque
+                datosFacturacion.Add(datos);
+            }
+
+            return string.Join("\n", datosFacturacion);
         }
 
     }

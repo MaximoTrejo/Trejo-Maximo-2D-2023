@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -98,5 +99,11 @@ namespace Entidades___Parcial_Laboratorio
             return vend;
         }
 
+        public static explicit operator Vendedor(SqlDataReader v)
+        {
+
+            Vendedor u = new(v["vend_mail"].ToString(), v["vend_clave"].ToString());
+            return u;
+        }
     }
 }

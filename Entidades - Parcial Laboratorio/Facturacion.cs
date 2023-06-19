@@ -56,5 +56,22 @@ namespace Entidades___Parcial_Laboratorio
 
             return HarcodeoDatos.encabezadoTicket;
         }
+
+        public static void ExportarDatosATexto(string filePath)
+        {
+            // Utilizar la clase 'using' para asegurar la liberación de recursos
+            using (StreamWriter streamWriter = new StreamWriter(filePath))
+            {
+                // Agregar los datos de facturación a la lista 'HarcodeoDatos.strings'
+                HarcodeoDatos.strings.Add(HarcodeoDatos.ObtenerDatosFacturacion(HarcodeoDatos.encabezadoTicket));
+
+                // Escribir cada línea en el archivo
+                foreach (string linea in HarcodeoDatos.strings)
+                {
+                    streamWriter.WriteLine(linea);
+                }
+            } // La clase 'StreamWriter' se cierra automáticamente al salir del bloque 'using'
+        }
+
     }
 }
