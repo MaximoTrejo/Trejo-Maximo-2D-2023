@@ -63,8 +63,6 @@ namespace Entidades___Parcial_Laboratorio
         {
             bool retorno = false;
 
-            Clientes clientes;
-
             if (usuario is not null)
             {
                 usuario.Email = nombre;
@@ -107,3 +105,11 @@ namespace Entidades___Parcial_Laboratorio
         }
     }
 }
+
+
+
+
+
+
+
+

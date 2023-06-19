@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades___Parcial_Laboratorio.Interfaz;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Entidades___Parcial_Laboratorio
 {
-    public class Clientes : Usuario
+    public class Clientes : Usuario 
     {
 
 
@@ -134,21 +135,11 @@ namespace Entidades___Parcial_Laboratorio
 
             if (usuario is not null)
             {
-                if (usuario.validarVendedor())
-                {
-                    usuario.Email = nombre;
-                    usuario.Pass = pass;
-                    retorno = true;
-                }
-                else
-                {
-                    clientes = (Clientes)usuario;
-                    clientes.Email = nombre;
-                    clientes.Pass = pass;
-                    clientes.importe = importe;
-                    retorno = true;
-                }
-
+                clientes = (Clientes)usuario;
+                clientes.Email = nombre;
+                clientes.Pass = pass;
+                clientes.importe = importe;
+                retorno = true;
             }
 
             return retorno;

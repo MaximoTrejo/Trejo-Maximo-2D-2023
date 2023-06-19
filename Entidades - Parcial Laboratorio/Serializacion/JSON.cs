@@ -8,10 +8,11 @@ using System.IO;
 using System.Linq;
 using System.Xml.Serialization;
 using System.Collections;
+using Entidades___Parcial_Laboratorio.Interfaz;
 
 namespace Entidades___Parcial_Laboratorio.Serializacion
 {
-    public class JSON<T>
+    public class JSON<T> :IArchivo
     {
         private static StreamReader? reader;
 
@@ -44,52 +45,28 @@ namespace Entidades___Parcial_Laboratorio.Serializacion
             return lista;
         }
 
-
-
-        public static void Serializar(List<T> lista, string pathFile)
+        public void Serializar<T1>(List<T1> lista, string pathFile)
         {
-            string path = Environment.CurrentDirectory + pathFile;
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + pathFile;
 
-                try
+            try
+            {
+                List<T1> listaCasteada = lista as List<T1>;
+
+                if (listaCasteada != null)
                 {
-                    List<T> listaCasteada = lista as List<T>;
-                    if (listaCasteada != null)
-                    {
-                        string jsonString = JsonConvert.SerializeObject(listaCasteada, Formatting.Indented);
-                        File.WriteAllText(path, jsonString);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Error al realizar el cast de la lista");
-                    }
+                    string jsonString = JsonConvert.SerializeObject(listaCasteada, Formatting.Indented);
+                    File.WriteAllText(path, jsonString);
                 }
-                catch (Exception ex)
+                else
                 {
-                    Console.WriteLine("Error al serializar la lista: " + ex.Message);
+                    Console.WriteLine("Error al realizar el cast de la lista");
                 }
-           
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al serializar la lista: " + ex.Message);
+            }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

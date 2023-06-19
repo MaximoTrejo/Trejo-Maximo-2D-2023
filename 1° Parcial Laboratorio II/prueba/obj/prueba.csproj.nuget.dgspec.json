@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FACULTAD\\Ejercicios\\1° Parcial Laboratorio II\\prueba\\prueba.csproj": {}
+    "C:\\Users\\maxim\\OneDrive\\Escritorio\\Trejo-Maximo-2D-2023\\1° Parcial Laboratorio II\\prueba\\prueba.csproj": {}
   },
   "projects": {
-    "D:\\FACULTAD\\Ejercicios\\1° Parcial Laboratorio II\\prueba\\prueba.csproj": {
+    "C:\\Users\\maxim\\OneDrive\\Escritorio\\Trejo-Maximo-2D-2023\\1° Parcial Laboratorio II\\prueba\\prueba.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FACULTAD\\Ejercicios\\1° Parcial Laboratorio II\\prueba\\prueba.csproj",
+        "projectUniqueName": "C:\\Users\\maxim\\OneDrive\\Escritorio\\Trejo-Maximo-2D-2023\\1° Parcial Laboratorio II\\prueba\\prueba.csproj",
         "projectName": "prueba",
-        "projectPath": "D:\\FACULTAD\\Ejercicios\\1° Parcial Laboratorio II\\prueba\\prueba.csproj",
+        "projectPath": "C:\\Users\\maxim\\OneDrive\\Escritorio\\Trejo-Maximo-2D-2023\\1° Parcial Laboratorio II\\prueba\\prueba.csproj",
         "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
-        "outputPath": "D:\\FACULTAD\\Ejercicios\\1° Parcial Laboratorio II\\prueba\\obj\\",
+        "outputPath": "C:\\Users\\maxim\\OneDrive\\Escritorio\\Trejo-Maximo-2D-2023\\1° Parcial Laboratorio II\\prueba\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

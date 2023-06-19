@@ -348,7 +348,7 @@ namespace Entidades___Parcial_Laboratorio
 
         private static void cargarVendedoresList()
         {
-            var listVendedores = VendedoresBDD.traerVendedor();
+            var listVendedores = VendedoresDAB.traerVendedor();
 
             foreach (var item in listVendedores)
             {

@@ -5,24 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.Xml;
+using Entidades___Parcial_Laboratorio.Interfaz;
 
 namespace Entidades___Parcial_Laboratorio.Serializacion
 {
-    public class XML
+    public class XML : IArchivo
     {
-        public static void Serializar<T>(string pathFile, List<T> listaDato)
+        public void Serializar<T>(List<T> lista,string pathFile)
         {
-            
-            
 
-            string path = Environment.CurrentDirectory + pathFile;
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + pathFile ;//Environment.CurrentDirectory + pathFile;
 
             try
             {
                 using (XmlTextWriter writer = new XmlTextWriter(path, Encoding.UTF8))
                 {
                     XmlSerializer ser = new XmlSerializer(typeof(List<T>));
-                    ser.Serialize(writer, listaDato);
+                    ser.Serialize(writer, lista);
 
                     Console.WriteLine("ok al Serializar los Datos");
                 }

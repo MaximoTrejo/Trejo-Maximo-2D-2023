@@ -1,0 +1,38 @@
+[
+  {
+    "nombre": "Vacio",
+    "kilo": 6.0,
+    "precioKilo": 20.0,
+    "stock": 3.0
+  },
+  {
+    "nombre": "Chorizo",
+    "kilo": 1.0,
+    "precioKilo": 19.0,
+    "stock": 6.0
+  },
+  {
+    "nombre": "Morcilla",
+    "kilo": 10.0,
+    "precioKilo": 5.0,
+    "stock": 10.0
+  },
+  {
+    "nombre": "Carne",
+    "kilo": 12.0,
+    "precioKilo": 112.0,
+    "stock": 3.0
+  },
+  {
+    "nombre": "Matambre",
+    "kilo": 2.0,
+    "precioKilo": 200.0,
+    "stock": 40.0
+  },
+  {
+    "nombre": "Ternera",
+    "kilo": 12.0,
+    "precioKilo": 34.0,
+    "stock": 40.0
+  }
+]
