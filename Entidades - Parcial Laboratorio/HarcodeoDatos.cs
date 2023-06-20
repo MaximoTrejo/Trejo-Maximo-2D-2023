@@ -68,7 +68,7 @@ namespace Entidades___Parcial_Laboratorio
 
             cargarClientesList();
             cargarVendedoresList();
-
+            cargarProductosList();
 
         }
         /// <summary>
@@ -353,6 +353,19 @@ namespace Entidades___Parcial_Laboratorio
             foreach (var item in listVendedores)
             {
                 Usuarios.Add(item);
+            }
+
+
+        }
+
+
+        private  void cargarProductosList()
+        {
+            var listProductos = ProductosDAB.traerProductos();
+
+            foreach (var item in listProductos)
+            {
+                Producto.Add(item);
             }
 
 

@@ -12,6 +12,7 @@ using System.Threading;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
+using _1er_ParcialLabo.BDD;
 
 namespace _1er_ParcialLabo
 {
@@ -342,6 +343,10 @@ namespace _1er_ParcialLabo
                 MessageBox.Show("Ticket Facturado", "Confirmación");
                 datos.CarritoCompra.Clear();
                 HarcodeoDatos.encabezadoTicket.Add(ticket);
+
+
+
+
                 dgvProductosVenta.Rows.Clear();
             }
             else

@@ -1,6 +1,8 @@
-﻿using Entidades___Parcial_Laboratorio;
+﻿using _1er_ParcialLabo.BDD;
+using Entidades___Parcial_Laboratorio;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -96,6 +98,7 @@ namespace Entidades___Parcial_Laboratorio
         {
 
             bool retorno = false;
+            HarcodeoDatos datos=new HarcodeoDatos();    
 
             if (listaProducto is not null && listaCarrito is not null)
             {
@@ -106,6 +109,10 @@ namespace Entidades___Parcial_Laboratorio
                         if (i == j)
                         {
                             i.stock = i.stock - 1;
+
+
+                            Producto ProductoBuscado = datos.buscarProductos(i.nombre);
+                            ProductosDAB.ModStockProducto(i.stock,ProductoBuscado);
 
                         }
                     }
@@ -142,16 +149,6 @@ namespace Entidades___Parcial_Laboratorio
             return retorno;
         }
 
-
-
-
-
-
-
-
-
-
-
         /// <summary>
         /// El método sobrecargado "==" compara si dos objetos de tipo Producto tienen el mismo nombre, 
         /// mientras que el método sobrecargado "!=" compara si dos objetos de tipo Producto no tienen el mismo nombre.
@@ -169,6 +166,12 @@ namespace Entidades___Parcial_Laboratorio
             return !(p1.nombre == p2.nombre);
         }
 
+
+        public static explicit operator Producto(SqlDataReader v)
+        {
+            Producto u = new Producto(v["prod_nombre"].ToString(), Convert.ToInt32(v["prod_kilo"]), Convert.ToInt32(v["prod_precio"]), Convert.ToInt32(v["prod_stock"]));
+            return u;
+        }
     }
 }
 

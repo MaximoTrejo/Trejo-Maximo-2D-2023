@@ -106,9 +106,9 @@ namespace _1er_ParcialLabo
         private void Heladera_Load(object sender, EventArgs e)
         {
 
-            string pathFile = @"\datos\serializado.json"; // Ruta del archivo donde deseas guardar el JSON serializado
+            //string pathFile = @"\datos\serializado.json"; // Ruta del archivo donde deseas guardar el JSON serializado
             //JSON<Producto>.Serializar(datos.listaProducto(), pathFile);
-            datos.CargarlistaProducto(JSON<Producto>.Deserializar(pathFile));
+            //datos.CargarlistaProducto(JSON<Producto>.Deserializar(pathFile));
 
 
             ltbProductos.DataSource = datos.MostrarPoducto();

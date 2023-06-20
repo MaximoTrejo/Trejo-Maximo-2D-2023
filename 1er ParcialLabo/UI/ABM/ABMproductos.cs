@@ -1,4 +1,5 @@
-﻿using Entidades___Parcial_Laboratorio;
+﻿using _1er_ParcialLabo.BDD;
+using Entidades___Parcial_Laboratorio;
 using Entidades___Parcial_Laboratorio.Serializacion;
 using System;
 using System.Collections.Generic;
@@ -41,9 +42,9 @@ namespace _1er_ParcialLabo
         {
 
 
-            string pathFile = @"\datos\serializado.json"; // Ruta del archivo donde deseas guardar el JSON serializado
+            //string pathFile = @"\datos\serializado.json"; // Ruta del archivo donde deseas guardar el JSON serializado
             //JSON<Producto>.Serializar(datos.listaProducto(), pathFile);
-            datos.CargarlistaProducto(JSON<Producto>.Deserializar(pathFile));
+            //datos.CargarlistaProducto(JSON<Producto>.Deserializar(pathFile));
 
             //string pathFile = @"\datos\serializadoxml.xml"; // Ruta del archivo XML a deserializar
             //List<Producto> listaProducto = XML.Deserializar<Producto>(pathFile);
@@ -141,6 +142,7 @@ namespace _1er_ParcialLabo
             if (datos.eliminarProductos(datos.buscarProductos(nombrePducto)))
             {
                 MessageBox.Show("Se elimino correctamente");
+                ProductosDAB.EliminarProducto(nombrePducto);
                 ltbProductos.DataSource = datos.MostrarPoducto();
 
 
@@ -198,10 +200,12 @@ namespace _1er_ParcialLabo
                                 {
                                     stock = Double.Parse(tbtStock.Text);
 
+                                    Producto ProductoBuscado = datos.buscarProductos(nombrePducto);
 
-                                    if (Producto.modificarProductos(datos.buscarProductos(nombrePducto), nombretxt, kilo, precioKilo, stock))
+                                    if (Producto.modificarProductos(ProductoBuscado, nombretxt, kilo, precioKilo, stock))
                                     {
                                         MessageBox.Show("Se modifico", "Confimacion");
+                                        ProductosDAB.ModProducto(nombretxt, kilo, precioKilo, stock, ProductoBuscado);
                                         //string pathFile = @"\datos\serializado.json"; // Ruta del archivo donde deseas guardar el JSON serializado
                                         //JSON<Producto>.Serializar(datos.listaProducto(), pathFile);
                                         ltbProductos.DataSource = datos.MostrarPoducto();//recorro la lista otra ves y se mostraria el dato modificado 
@@ -299,6 +303,7 @@ namespace _1er_ParcialLabo
                                     if (datos.agregarProductos(nombretxt, kilo, precioKilo, stock))
                                     {
                                         MessageBox.Show("Se agrego correctamente");
+                                        ProductosDAB.AddProducto(nombretxt, kilo, precioKilo, stock);
                                         //string pathFile = @"\datos\serializado.json"; // Ruta del archivo donde deseas guardar el JSON serializado
                                         //JSON<Producto>.Serializar(datos.listaProducto(), pathFile);
                                         ltbProductos.DataSource = datos.MostrarPoducto();
