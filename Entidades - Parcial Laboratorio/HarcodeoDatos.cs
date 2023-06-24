@@ -23,7 +23,7 @@ namespace Entidades___Parcial_Laboratorio
 
         public  List<Producto> CarritoCompra = new List<Producto>();
 
-        public static List<Facturacion> encabezadoTicket;
+        public  static List<Facturacion> encabezadoTicket = new List<Facturacion>();
 
         public static List<string> strings = new List<string>();
 
@@ -32,9 +32,7 @@ namespace Entidades___Parcial_Laboratorio
         /// </summary>
         public HarcodeoDatos()
         {
-            encabezadoTicket= new List<Facturacion>();
-
-            cargadoTicket();
+            //cargadoTicket();
             
 
             //Usuario cli1 = new Clientes ("mail1@gmail,com", "11111", 120);
@@ -66,15 +64,15 @@ namespace Entidades___Parcial_Laboratorio
             //Producto.Add(new Producto("Chorizo", 1, 19, 6));
             //Producto.Add(new Producto("Morcilla", 10, 5, 10));
 
-            cargarClientesList();
-            cargarVendedoresList();
+            //cargarClientesList();
+            //cargarVendedoresList();
             cargarProductosList();
 
         }
         /// <summary>
         /// Harcodeo de facturacion
         /// </summary>
-        public void cargadoTicket()
+        public static void cargadoTicket()
         {
             List<string> Productos1 = new List<string>() { "Chori", "Matambre" };
             List<string> Productos2 = new List<string>() { "Vacio", "Chinculin" };
@@ -334,7 +332,7 @@ namespace Entidades___Parcial_Laboratorio
         }
 
         //base de datos
-        private static void cargarClientesList()
+        public static void cargarClientesList()
         {
             var listClientes = ClientesBDD.traerCliente();
             
@@ -346,7 +344,7 @@ namespace Entidades___Parcial_Laboratorio
 
         }
 
-        private static void cargarVendedoresList()
+        public static void cargarVendedoresList()
         {
             var listVendedores = VendedoresDAB.traerVendedor();
 
@@ -359,7 +357,7 @@ namespace Entidades___Parcial_Laboratorio
         }
 
 
-        private  void cargarProductosList()
+        private void cargarProductosList()
         {
             var listProductos = ProductosDAB.traerProductos();
 
@@ -418,6 +416,46 @@ namespace Entidades___Parcial_Laboratorio
             }
 
             return string.Join("\n", datosFacturacion);
+        }
+
+        /// <summary>
+        /// recorro la lista de usuarios y paso el saldo que tiene el usuario el cual me lo pasan por parametros
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
+        public static double buscarImporte(Usuario usuario)
+        {
+
+            Clientes clientes;
+            foreach (Usuario i in Usuarios)
+            {
+                clientes = (Clientes)i;
+                return clientes.importe;
+            }
+            return 0;
+        }
+
+        /// <summary>
+        /// Agrega un vendedor a la lista de usuarios 
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="pass"></param>
+        /// <param name="usuario"></param>
+        /// <param name="tipo"></param>
+        /// <returns></returns>
+        public static bool agregarVendedor(string nombre, string pass, Usuario usuario, string tipo)
+        {
+            bool retorno = false;
+
+            if (nombre != null && pass != null)
+            {
+                if (tipo == "Vendedor")
+                {
+                    Usuarios.Add(new Vendedor(nombre, pass));
+                    retorno = true;
+                }
+            }
+            return retorno;
         }
 
     }

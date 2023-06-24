@@ -106,19 +106,28 @@ namespace _1er_ParcialLabo
         private void actualizarForm()
         {
             dgvFacturacion.Rows.Clear();
-
-            if (facturaciones[posicion].nombreProductos.Count == facturaciones[posicion].Cantidades.Count
+            try
+            {
+                if (facturaciones[posicion].nombreProductos.Count == facturaciones[posicion].Cantidades.Count
                 && facturaciones[posicion].nombreProductos.Count == facturaciones[posicion].PrecioUnidad.Count
                 && facturaciones[posicion].Cantidades.Count == facturaciones[posicion].Cantidades.Count)
-            {
-                //MessageBox.Show("No hay mas facturas", "Error");
-                for (int i = 0; i < facturaciones[posicion].nombreProductos.Count; i++)
                 {
-                    dgvFacturacion.Rows.Add(facturaciones[posicion].nombreProductos[i], facturaciones[posicion].Cantidades[i], facturaciones[posicion].PrecioUnidad[i], facturaciones[posicion].Cantidades[i] * facturaciones[posicion].PrecioUnidad[i]);
+                    //MessageBox.Show("No hay mas facturas", "Error");
+                    for (int i = 0; i < facturaciones[posicion].nombreProductos.Count; i++)
+                    {
+                        dgvFacturacion.Rows.Add(facturaciones[posicion].nombreProductos[i], facturaciones[posicion].Cantidades[i], facturaciones[posicion].PrecioUnidad[i], facturaciones[posicion].Cantidades[i] * facturaciones[posicion].PrecioUnidad[i]);
+                    }
                 }
+                lblMail.Text = facturaciones[posicion].Email;
+                lblTotal.Text = facturaciones[posicion].PrecioTotal.ToString();
+
+
             }
-            lblMail.Text = facturaciones[posicion].Email;
-            lblTotal.Text = facturaciones[posicion].PrecioTotal.ToString();
+            catch (Exception ex)
+            {
+                MessageBox.Show("No hay facturas cargadas ");
+            }
+            
         }
 
         //----------------------------------------------------------------------------------------

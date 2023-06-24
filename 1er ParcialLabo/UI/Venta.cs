@@ -24,14 +24,14 @@ namespace _1er_ParcialLabo
     public partial class Venta : Form
     {
 
-
+        
         //delegado
         public delegate void OperacionTerminadaEvent(bool exito);
         //evento
         public event OperacionTerminadaEvent OperacionTerminada;
+        
 
-
-        private Facturacion ticket;
+        //private Facturacion ticket;
         HarcodeoDatos datos;
         Usuario usuarioLogeado;
         double importe;
@@ -176,7 +176,7 @@ namespace _1er_ParcialLabo
                     MessageBox.Show("Se encontro el usuario correctamente", "Confirmacion");
                     lblUsuario.Text = usuario.Email;
                     lblImporte.Visible = true;
-                    importe = Usuario.buscarImporte(usuario);
+                    importe =HarcodeoDatos.buscarImporte(usuario);
                     lblImporte.Text = importe.ToString();
                     lblCategoria.Text = Usuario.categoriaUsuarios(usuario);
                     //usuarioLogeado = usuario;
@@ -300,18 +300,48 @@ namespace _1er_ParcialLabo
             List<int> precioUnidad = datos.precioUnidad();
 
             //guardo el ticket en mi clase facturacion 
-            ticket = new Facturacion(lblUsuario.Text, SumaCarrito, nombre, cantidad, precioUnidad); // Asignar valor a la variable de clase
+            Facturacion ticket = new Facturacion(lblUsuario.Text, SumaCarrito, nombre, cantidad, precioUnidad); // Asignar valor a la variable de clase
 
+            /*
+            if (Clientes.compararImportes(importe, SumaCarrito))
+            {
+
+                if (Producto.reducirStock(datos.Producto, datos.CarritoCompra))
+                {
+
+                    if (MessageBox.Show(ticket.MostrarFacturacion(), "Confirme el producto", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        MessageBox.Show("Ticket Facturado", "Confirmacion");
+                        //datos.CarritoCompra.Clear();
+                       HarcodeoDatos.encabezadoTicket.Add(ticket);
+                        datos.CarritoCompra.Clear();
+                        dgvProductosVenta.Rows.Clear();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No tiene el saldo suficiente para realizar la compra", "Error");
+                datos.CarritoCompra.Clear();
+                dgvProductosVenta.Rows.Clear();
+            }
+            */
+
+
+            
             //crea una clase para poder iniciar un hilo y se le asigna un delegado
             Thread procesoThread = new Thread(() => EjecutarProceso(ticket, SumaCarrito));
             //se subcribe el metodo proceso terminado al evento
             OperacionTerminada += ProcesoTerminado;
             //se inicia el subproceso ejecutando el metodo ejecutar proceso
             procesoThread.Start();
+            dgvProductosVenta.Rows.Clear();
+            //datos.CarritoCompra.Clear();
+            
         }
 
 
-
+        
         private void EjecutarProceso(Facturacion ticket, double sumaCarrito)
         {
             if (Clientes.compararImportes(importe, sumaCarrito))
@@ -321,6 +351,8 @@ namespace _1er_ParcialLabo
                     if (MessageBox.Show(ticket.MostrarFacturacion(), "Confirme el producto", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         OperacionTerminada.Invoke(true);
+                        HarcodeoDatos.encabezadoTicket.Add(ticket);
+                       
                     }
                 }
             }
@@ -332,31 +364,22 @@ namespace _1er_ParcialLabo
 
         private void ProcesoTerminado(bool exito)
         {
-            if (InvokeRequired)
-            {
-                // Si la llamada se realiza desde un subproceso diferente al subproceso de la interfaz de usuario,
-                // utilizar Invoke para sincronizar la llamada.
-                Invoke(new Action<bool>(ProcesoTerminado), exito);
-            }
+            
             if (exito)
             {
                 MessageBox.Show("Ticket Facturado", "Confirmación");
                 datos.CarritoCompra.Clear();
-                HarcodeoDatos.encabezadoTicket.Add(ticket);
+                
 
-
-
-
-                dgvProductosVenta.Rows.Clear();
             }
             else
             {
                 MessageBox.Show("No tiene el saldo suficiente para realizar la compra", "Error");
-                datos.CarritoCompra.Clear();
-                dgvProductosVenta.Rows.Clear();
+                //datos.CarritoCompra.Clear();
+                //dgvProductosVenta.Rows.Clear();
             }
         }
-
+        
 
         /// <summary>
         ///La función contar devuelve una lista de enteros que representan la cantidad de veces que aparece cada producto en el carrito de compras. 

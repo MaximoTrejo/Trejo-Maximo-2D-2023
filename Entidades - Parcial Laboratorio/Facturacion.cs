@@ -1,6 +1,7 @@
 ﻿using Entidades___Parcial_Laboratorio;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -72,6 +73,13 @@ namespace Entidades___Parcial_Laboratorio
                 }
             } // La clase 'StreamWriter' se cierra automáticamente al salir del bloque 'using'
         }
+
+
+
+       
+
+
+
 
     }
 }

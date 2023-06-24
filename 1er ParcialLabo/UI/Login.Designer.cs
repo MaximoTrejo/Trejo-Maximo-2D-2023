@@ -211,6 +211,7 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Login_Load;
             pnlBordeSuperior.ResumeLayout(false);
             pnlBordeSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ptbMini).EndInit();

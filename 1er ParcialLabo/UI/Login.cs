@@ -124,5 +124,11 @@ namespace _1er_ParcialLabo
 
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+            HarcodeoDatos.cargarClientesList();
+            HarcodeoDatos.cargarVendedoresList();
+            HarcodeoDatos.cargadoTicket();
+        }
     }
 }

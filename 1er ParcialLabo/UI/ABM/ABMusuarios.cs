@@ -294,6 +294,7 @@ namespace _1er_ParcialLabo
         /// <param name="e"></param>
         private void btnClientes_Click(object sender, EventArgs e)
         {
+
             ltbUsuarios.DataSource = Clientes.MostrarClientes();
         }
 

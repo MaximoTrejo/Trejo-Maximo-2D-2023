@@ -14,10 +14,7 @@ namespace Entidades___Parcial_Laboratorio
         /// </summary>
         /// <param name="Email"></param>
         /// <param name="Pass"></param>
-        public Vendedor(string Email, string Pass) : base(Email, Pass)
-        {
-
-        }
+        public Vendedor(string Email, string Pass) : base(Email, Pass){}
 
         /// <summary>
         ///metodo "validarVendedor" utilizo un modificador "override", para sobrescribir el comportamiento de un método con el mismo nombre y firma en su clase padre. 
