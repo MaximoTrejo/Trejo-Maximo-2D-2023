@@ -181,7 +181,7 @@ namespace Entidades___Parcial_Laboratorio
 
                 Usuario usuaBuscado = datos.buscarUsuario(nombre);
 
-                if (usuaBuscado.Email != nombre)
+                if (usuaBuscado is null)
                 {
                     HarcodeoDatos.Usuarios.Add(new Clientes(nombre, pass, importe)); ;
                     retorno = true;

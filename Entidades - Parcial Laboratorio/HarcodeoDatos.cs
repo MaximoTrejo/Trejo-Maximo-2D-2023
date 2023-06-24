@@ -310,7 +310,7 @@ namespace Entidades___Parcial_Laboratorio
 
                 Producto usuaBuscado = buscarProductos(nombre);
 
-                if (usuaBuscado.nombre != nombre)
+                if (usuaBuscado is null)
                 {
                     Producto.Add(new Producto(nombre, kilo, precioKilo, stock));
                     retorno = true;

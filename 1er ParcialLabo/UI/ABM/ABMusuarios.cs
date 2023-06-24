@@ -186,6 +186,7 @@ namespace _1er_ParcialLabo
                         if (Vendedor.modificarVendedor(nombretxt, Pass, datos.buscarUsuario(nombreUsuario)))
                         {
                             VendedoresDAB.ModVendedores(nombretxt, Pass);
+                            MessageBox.Show("Se modifico", "Confirmacion");
                             ltbUsuarios.DataSource = Vendedor.MostrarVendedores();
                         }
                         else
