@@ -148,8 +148,8 @@ namespace _1er_ParcialLabo
 
             dgvProductosVenta.AllowUserToAddRows = false;
 
-            cbxMediosPago.Items.Add(MediosPago.Efectivo);
-            cbxMediosPago.Items.Add(MediosPago.Credito);
+            cbxMediosPago.Items.Add(eMediosPago.Efectivo);
+            cbxMediosPago.Items.Add(eMediosPago.Credito);
 
         }
 
