@@ -99,14 +99,18 @@ namespace Entidades___Parcial_Laboratorio
         /// <returns></returns>
         public Usuario ListaValido(string mail, string pass)
         {
-            
-            foreach (Usuario i in Usuarios)
+            if (mail is not null && pass is not null)
             {
-                
-                if (i.Email.Equals(mail) && i.Pass.Equals(pass))
+                foreach (Usuario i in Usuarios)
                 {
-                    return i;
+
+                    if (i.Email.Equals(mail) && i.Pass.Equals(pass))
+                    {
+                        return i;
+                    }
                 }
+                
+
             }
             return null;
         }
