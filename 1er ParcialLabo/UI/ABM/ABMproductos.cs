@@ -300,17 +300,21 @@ namespace _1er_ParcialLabo
                                 {
                                     stock = Double.Parse(tbtStock.Text);
 
-                                    if (datos.agregarProductos(nombretxt, kilo, precioKilo, stock))
-                                    {
-                                        MessageBox.Show("Se agrego correctamente");
-                                        ProductosDAB.AddProducto(nombretxt, kilo, precioKilo, stock);
-                                        //string pathFile = @"\datos\serializado.json"; // Ruta del archivo donde deseas guardar el JSON serializado
-                                        //JSON<Producto>.Serializar(datos.listaProducto(), pathFile);
-                                        ltbProductos.DataSource = datos.MostrarPoducto();
+
+                                    try {
+
+                                        if (datos.agregarProductos(nombretxt, kilo, precioKilo, stock))
+                                        {
+                                            MessageBox.Show("Se agrego correctamente");
+                                            ProductosDAB.AddProducto(nombretxt, kilo, precioKilo, stock);
+                                            //string pathFile = @"\datos\serializado.json"; // Ruta del archivo donde deseas guardar el JSON serializado
+                                            //JSON<Producto>.Serializar(datos.listaProducto(), pathFile);
+                                            ltbProductos.DataSource = datos.MostrarPoducto();
+                                        }
                                     }
-                                    else
+                                    catch (ProductoExistenteException ex)
                                     {
-                                        MessageBox.Show("No se agrego correctamente");
+                                        MessageBox.Show("No se agrego correctamente,el Producto ya existe");
                                     }
 
                                 }

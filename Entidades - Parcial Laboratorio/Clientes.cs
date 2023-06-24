@@ -177,14 +177,24 @@ namespace Entidades___Parcial_Laboratorio
 
             if (nombre != null && pass != null)
             {
+                HarcodeoDatos datos = new HarcodeoDatos();
 
-                HarcodeoDatos.Usuarios.Add(new Clientes(nombre, pass, importe)); ;
-                retorno = true;
+                Usuario usuaBuscado = datos.buscarUsuario(nombre);
 
-
+                if (usuaBuscado.Email != nombre)
+                {
+                    HarcodeoDatos.Usuarios.Add(new Clientes(nombre, pass, importe)); ;
+                    retorno = true;
+                }
+                else
+                {
+                    throw new ProductoExistenteException("El producto ya existe");
+                    retorno = false;
+                }
             }
             return retorno;
         }
+
 
 
         public static explicit operator Clientes(SqlDataReader v)

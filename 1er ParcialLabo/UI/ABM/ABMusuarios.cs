@@ -80,16 +80,21 @@ namespace _1er_ParcialLabo
 
                      if (tipo == "Vendedor")
                      {
-                        if (Vendedor.agregarVendedor(nombretxt, Pass, usuarioLogeado, tipo))
-                        {
-                           MessageBox.Show("Se agrego correctamente");
-                            VendedoresDAB.AddVendedores(nombretxt, Pass);
 
-                        }
-                        else
+                        try
                         {
-                           MessageBox.Show("No se agrego correctamente");
+                            if (Vendedor.agregarVendedor(nombretxt, Pass, usuarioLogeado, tipo))
+                            {
+                                MessageBox.Show("Se agrego correctamente");
+                                VendedoresDAB.AddVendedores(nombretxt, Pass);
+
+                            }
                         }
+                        catch (ProductoExistenteException ex)
+                        {
+                            MessageBox.Show("No se agrego correctamente,el Usuario ya existe");
+                        }
+
                      }
                      else
                      {
@@ -101,17 +106,20 @@ namespace _1er_ParcialLabo
 
                             if (ValidacionesABM.ValidarMonto(importe))
                             {
-
-                                if (Clientes.agregarClientes(nombretxt, Pass, usuarioLogeado, importe))
+                                try
                                 {
-                                    MessageBox.Show("Se agrego correctamente");
-                                    ClientesBDD.AddClientes(nombretxt, Pass, importe);
+                                    if (Clientes.agregarClientes(nombretxt, Pass, usuarioLogeado, importe))
+                                    {
+                                        MessageBox.Show("Se agrego correctamente");
+                                        ClientesBDD.AddClientes(nombretxt, Pass, importe);
 
+                                    }
                                 }
-                                else
+                                catch (ProductoExistenteException ex)
                                 {
-                                    MessageBox.Show("No se agrego correctamente");
+                                    MessageBox.Show("No se agrego correctamente,el Usuario ya existe");
                                 }
+                                
                             }
                             else
                             {

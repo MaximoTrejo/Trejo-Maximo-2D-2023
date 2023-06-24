@@ -307,11 +307,21 @@ namespace Entidades___Parcial_Laboratorio
 
             if (nombre != null && kilo > 0 && precioKilo > 0 && stock > 0)
             {
-                Producto.Add(new Producto(nombre, kilo, precioKilo, stock));
-                retorno = true;
+
+                Producto usuaBuscado = buscarProductos(nombre);
+
+                if (usuaBuscado.nombre != nombre)
+                {
+                    Producto.Add(new Producto(nombre, kilo, precioKilo, stock));
+                    retorno = true;
+                }
+                else
+                {
+                    throw new ProductoExistenteException("El producto ya existe");
+                    retorno = false;
+                }
+
             }
-
-
             return retorno;
         }
 

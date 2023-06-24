@@ -41,8 +41,21 @@ namespace Entidades___Parcial_Laboratorio
             {
                 if (tipo == "Vendedor")
                 {
-                    HarcodeoDatos.Usuarios.Add(new Vendedor(nombre, pass));
-                    retorno = true;
+
+                    HarcodeoDatos datos = new HarcodeoDatos();
+
+                    Usuario usuaBuscado = datos.buscarUsuario(nombre);
+
+                    if (usuaBuscado.Email != nombre)
+                    {
+                        HarcodeoDatos.Usuarios.Add(new Vendedor(nombre, pass));
+                        retorno = true;
+                    }
+                    else
+                    {
+                        throw new ProductoExistenteException("El Usuario ya existe");
+                        retorno = false;
+                    }
                 }
             }
             return retorno;
