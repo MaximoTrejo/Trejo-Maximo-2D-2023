@@ -75,6 +75,12 @@ namespace Entidades___Parcial_Laboratorio
             }
         }
 
+
+        /// <summary>
+        /// Valida que el monto no supere los 100000
+        /// </summary>
+        /// <param name="monto"></param>
+        /// <returns></returns>
         public static bool ValidarMonto(double monto)
         {
             if (monto <= 100000)
@@ -87,7 +93,11 @@ namespace Entidades___Parcial_Laboratorio
             }
         }
 
-
+        /// <summary>
+        /// Valida que el peso no supere los 100000
+        /// </summary>
+        /// <param name=peso></param>
+        /// <returns></returns>
         public static bool ValidarPeso(double peso)
         {
             if (peso <= 10000)

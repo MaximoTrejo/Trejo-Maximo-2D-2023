@@ -32,9 +32,7 @@ namespace Entidades___Parcial_Laboratorio
         /// </summary>
         public HarcodeoDatos()
         {
-            //cargadoTicket();
             
-
             //Usuario cli1 = new Clientes ("mail1@gmail,com", "11111", 120);
             //Usuario cli2 = new Clientes("mail2@gmail,com", "11111", 520);
             //Usuario cli3 = new Clientes("mail3@gmaill,com", "11111", 20);
@@ -64,11 +62,11 @@ namespace Entidades___Parcial_Laboratorio
             //Producto.Add(new Producto("Chorizo", 1, 19, 6));
             //Producto.Add(new Producto("Morcilla", 10, 5, 10));
 
-            //cargarClientesList();
-            //cargarVendedoresList();
             cargarProductosList();
 
         }
+
+
         /// <summary>
         /// Harcodeo de facturacion
         /// </summary>
@@ -345,7 +343,9 @@ namespace Entidades___Parcial_Laboratorio
             return retorno;
         }
 
-        //base de datos
+        /// <summary>
+        /// Carga los clientes en la lista de usuarios
+        /// </summary>
         public static void cargarClientesList()
         {
             var listClientes = ClientesBDD.traerCliente();
@@ -358,6 +358,9 @@ namespace Entidades___Parcial_Laboratorio
 
         }
 
+        /// <summary>
+        /// Carga los vendedores a la lista de usuarios
+        /// </summary>
         public static void cargarVendedoresList()
         {
             var listVendedores = VendedoresDAB.traerVendedor();
@@ -370,7 +373,9 @@ namespace Entidades___Parcial_Laboratorio
 
         }
 
-
+        /// <summary>
+        /// Carga los productos a la lista de productos
+        /// </summary>
         private void cargarProductosList()
         {
             var listProductos = ProductosDAB.traerProductos();
@@ -384,6 +389,10 @@ namespace Entidades___Parcial_Laboratorio
         }
 
 
+        /// <summary>
+        /// Crea una lista de productos y te la devuelve con los datos que esta en la lista principal
+        /// </summary>
+        /// <returns></returns>
         public List<Producto> listaProducto()
         {
             List<Producto> prod = new List<Producto>();
@@ -398,18 +407,31 @@ namespace Entidades___Parcial_Laboratorio
             return prod;
         }
 
+        /// <summary>
+        /// Carga la lista de productos cargada con el Json
+        /// </summary>
+        /// <param name="json"></param>
+        /// <returns></returns>
         public List<Producto> CargarlistaProducto(List<Producto> json)
         {
+            // Asigna la lista de productos en formato JSON al objeto "Producto"
             Producto = json;
-            //Console.WriteLine(Producto[1]);
+            // Devuelve la lista de productos cargada
             return Producto;
         }
 
-       
+
+
+        /// <summary>
+        /// Obtiene los datos de facturación de una lista de objetos Facturacion y devuelve una cadena de texto.
+        /// </summary>
+        /// <param name="listaFacturacion">Lista de objetos Facturacion.</param>
+        /// <returns>Representación de cadena de texto de los datos de facturación.</returns>
         public static string  ObtenerDatosFacturacion(List<Facturacion> listaFacturacion)
         {
             List<string> datosFacturacion = new List<string>();
 
+            // Iterar sobre cada objeto Facturacion en la lista
             foreach (Facturacion factura in listaFacturacion)
             {
                 string datos = $"Email: {factura.Email}, Precio Total: {factura.PrecioTotal}";
@@ -428,7 +450,7 @@ namespace Entidades___Parcial_Laboratorio
                 datos += "\n"; // Agregar una línea vacía al final del bloque
                 datosFacturacion.Add(datos);
             }
-
+            // retorna todas las representaciones de cadena de texto de los datos de facturación
             return string.Join("\n", datosFacturacion);
         }
 

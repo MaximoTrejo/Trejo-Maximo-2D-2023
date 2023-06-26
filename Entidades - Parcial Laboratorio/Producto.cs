@@ -166,7 +166,11 @@ namespace Entidades___Parcial_Laboratorio
             return !(p1.nombre == p2.nombre);
         }
 
-
+        /// <summary>
+        /// Convierte un objeto SqlDataReader en un objeto Productos
+        /// </summary>
+        /// <param name="v">Objeto SqlDataReader a convertir.</param>
+        /// <returns>Objeto Clientes convertido.</returns>
         public static explicit operator Producto(SqlDataReader v)
         {
             Producto u = new Producto(v["prod_nombre"].ToString(), Convert.ToInt32(v["prod_kilo"]), Convert.ToInt32(v["prod_precio"]), Convert.ToInt32(v["prod_stock"]));

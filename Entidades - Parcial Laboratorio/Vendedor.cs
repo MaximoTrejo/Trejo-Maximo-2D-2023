@@ -107,6 +107,11 @@ namespace Entidades___Parcial_Laboratorio
             return vend;
         }
 
+        /// <summary>
+        /// Convierte un objeto SqlDataReader en un objeto Vendedor
+        /// </summary>
+        /// <param name="v">Objeto SqlDataReader a convertir.</param>
+        /// <returns>Objeto Clientes convertido.</returns>
         public static explicit operator Vendedor(SqlDataReader v)
         {
 

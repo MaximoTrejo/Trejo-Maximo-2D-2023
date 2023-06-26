@@ -196,7 +196,11 @@ namespace Entidades___Parcial_Laboratorio
         }
 
 
-
+        /// <summary>
+        /// Convierte un objeto SqlDataReader en un objeto Clientes.
+        /// </summary>
+        /// <param name="v">Objeto SqlDataReader a convertir.</param>
+        /// <returns>Objeto Clientes convertido.</returns>
         public static explicit operator Clientes(SqlDataReader v)
         {
 

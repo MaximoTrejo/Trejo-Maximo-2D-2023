@@ -11,6 +11,15 @@ namespace Entidades___Parcial_Laboratorio.Serializacion
 {
     public class XML : IArchivo
     {
+
+
+
+        /// <summary>
+        /// Serializa una lista de objetos genéricos y los guarda en un archivo XML en la ruta especificada.
+        /// </summary>
+        /// <typeparam name="T">El tipo de objetos en la lista.</typeparam>
+        /// <param name="lista">La lista de objetos a serializar.</param>
+        /// <param name="pathFile">La ruta del archivo donde se guardará la lista serializada.</param>
         public void Serializar<T>(List<T> lista,string pathFile)
         {
 
@@ -34,6 +43,13 @@ namespace Entidades___Parcial_Laboratorio.Serializacion
             
         }
 
+
+        /// <summary>
+        /// Deserializa un archivo XML en la ubicación especificada y devuelve una lista de objetos del tipo especificado.
+        /// </summary>
+        /// <typeparam name="T">El tipo de objeto que se va a deserializar.</typeparam>
+        /// <param name="pathFile">La ruta del archivo XML a deserializar.</param>
+        /// <returns>Una lista de objetos del tipo especificado.</returns>
         public static List<T> Deserializar<T>(string pathFile)
         {
             string path = Environment.CurrentDirectory + pathFile;

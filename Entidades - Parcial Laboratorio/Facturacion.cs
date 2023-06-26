@@ -58,6 +58,12 @@ namespace Entidades___Parcial_Laboratorio
             return HarcodeoDatos.encabezadoTicket;
         }
 
+
+
+        /// <summary>
+        /// Exporta los datos de facturación a un archivo de texto en la ubicación especificada.
+        /// </summary>
+        /// <param name="filePath">Ruta del archivo de texto.</param>
         public static void ExportarDatosATexto(string filePath)
         {
             // Utilizar la clase 'using' para asegurar la liberación de recursos

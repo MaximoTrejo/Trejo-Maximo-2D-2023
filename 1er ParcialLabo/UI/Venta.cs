@@ -301,37 +301,14 @@ namespace _1er_ParcialLabo
 
             //guardo el ticket en mi clase facturacion 
             Facturacion ticket = new Facturacion(lblUsuario.Text, SumaCarrito, nombre, cantidad, precioUnidad); // Asignar valor a la variable de clase
-
-            /*
-            if (Clientes.compararImportes(importe, SumaCarrito))
-            {
-
-                if (Producto.reducirStock(datos.Producto, datos.CarritoCompra))
-                {
-
-                    if (MessageBox.Show(ticket.MostrarFacturacion(), "Confirme el producto", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                    {
-                        MessageBox.Show("Ticket Facturado", "Confirmacion");
-                        //datos.CarritoCompra.Clear();
-                       HarcodeoDatos.encabezadoTicket.Add(ticket);
-                        datos.CarritoCompra.Clear();
-                        dgvProductosVenta.Rows.Clear();
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("No tiene el saldo suficiente para realizar la compra", "Error");
-                datos.CarritoCompra.Clear();
-                dgvProductosVenta.Rows.Clear();
-            }
-            */
-
-
             
             //crea una clase para poder iniciar un hilo y se le asigna un delegado
             Thread procesoThread = new Thread(() => EjecutarProceso(ticket, SumaCarrito));
             //se subcribe el metodo proceso terminado al evento
+            //Esto significa que cuando se dispare el evento OperacionTerminada
+            //se ejecutará el código dentro del método ProcesoTerminado.
+            //operacionTerminada evento
+            //peoceso terminado delegado 
             OperacionTerminada += ProcesoTerminado;
             //se inicia el subproceso ejecutando el metodo ejecutar proceso
             procesoThread.Start();
@@ -341,7 +318,11 @@ namespace _1er_ParcialLabo
         }
 
 
-        
+        /// <summary>
+        /// Ejecuta el proceso de facturación y realiza diversas operaciones.
+        /// </summary>
+        /// <param name="ticket">Objeto de tipo Facturacion que representa el ticket de compra.</param>
+        /// <param name="sumaCarrito">Valor numérico que representa la suma total de los productos en el carrito de compra.</param>
         private void EjecutarProceso(Facturacion ticket, double sumaCarrito)
         {
             if (Clientes.compararImportes(importe, sumaCarrito))
@@ -362,6 +343,11 @@ namespace _1er_ParcialLabo
             }
         }
 
+
+        /// <summary>
+        /// Método que se ejecuta cuando se ha completado un proceso de facturación.
+        /// </summary>
+        /// <param name="exito">Valor booleano que indica si el proceso fue exitoso (true) o si ocurrió un error (false).</param>
         private void ProcesoTerminado(bool exito)
         {
             
@@ -375,8 +361,6 @@ namespace _1er_ParcialLabo
             else
             {
                 MessageBox.Show("No tiene el saldo suficiente para realizar la compra", "Error");
-                //datos.CarritoCompra.Clear();
-                //dgvProductosVenta.Rows.Clear();
             }
         }
         
