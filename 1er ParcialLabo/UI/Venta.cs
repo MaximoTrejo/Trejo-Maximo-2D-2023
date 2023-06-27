@@ -299,6 +299,8 @@ namespace _1er_ParcialLabo
             List<int> cantidad = contar();
             List<int> precioUnidad = datos.precioUnidad();
 
+            //Usuario cliBuscado = datos.buscarUsuario(lblUsuario.Text);
+
             //guardo el ticket en mi clase facturacion 
             Facturacion ticket = new Facturacion(lblUsuario.Text, SumaCarrito, nombre, cantidad, precioUnidad); // Asignar valor a la variable de clase
             
@@ -314,7 +316,10 @@ namespace _1er_ParcialLabo
             procesoThread.Start();
             dgvProductosVenta.Rows.Clear();
             //datos.CarritoCompra.Clear();
-            
+            Usuario cliBuscado = datos.buscarUsuario(lblUsuario.Text);
+            importe = HarcodeoDatos.buscarImporte(cliBuscado);
+            lblImporte.Text = importe.ToString();
+
         }
 
 
@@ -402,11 +407,6 @@ namespace _1er_ParcialLabo
             }
             return cantidad.Values.ToList();//devuelvo una lista de enteros que contiene los valores del diccionario
         }
-
-        
-
-
-
 
 
     }
