@@ -1,4 +1,5 @@
-﻿using Entidades___Parcial_Laboratorio.Interfaz;
+﻿using _1er_ParcialLabo.BDD;
+using Entidades___Parcial_Laboratorio.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -53,13 +54,23 @@ namespace Entidades___Parcial_Laboratorio
         /// <param name="saldoCliente"></param>
         /// <param name="importeTotal"></param>
         /// <returns></returns>
-        public static bool compararImportes(double saldoCliente, double importeTotal)
+        public static bool compararImportes(double saldoCliente, double importeTotal,string cliente)
         {
+            HarcodeoDatos datos = new HarcodeoDatos();
+            double cuenta;
 
             if (saldoCliente > 0 && importeTotal > 0)
             {
                 if (saldoCliente >= importeTotal)
                 {
+                    cuenta = saldoCliente - importeTotal;
+                    
+                    Usuario cliBuscado = datos.buscarUsuario(cliente);
+
+                    reducirImporte(cliBuscado, importeTotal);
+
+                    ClientesBDD.ModImporteCliente(cuenta, cliBuscado);
+
                     return true;
                 }
             }

@@ -325,7 +325,7 @@ namespace _1er_ParcialLabo
         /// <param name="sumaCarrito">Valor numérico que representa la suma total de los productos en el carrito de compra.</param>
         private void EjecutarProceso(Facturacion ticket, double sumaCarrito)
         {
-            if (Clientes.compararImportes(importe, sumaCarrito))
+            if (Clientes.compararImportes(importe, sumaCarrito,lblUsuario.Text))
             {
                 if (Producto.reducirStock(datos.Producto, datos.CarritoCompra))
                 {

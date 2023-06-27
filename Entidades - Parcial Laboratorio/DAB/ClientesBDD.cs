@@ -152,5 +152,36 @@ namespace _1er_ParcialLabo.BDD
 
             return filas;
         }
+
+
+        public static int ModImporteCliente(double importe, Usuario cliente)
+        {
+            int filas = 0;
+
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "update Clientes set cli_importe=@importe where cli_mail = @nombreBuscado";
+                sqlCommand.Parameters.AddWithValue("@nombreBuscado", cliente.Email);
+                sqlCommand.Parameters.AddWithValue("@importe", importe);
+
+
+                filas = sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw new Exception("Error de conexión a la base de datos");
+            }
+            finally
+            {
+                if (sqlConnection.State == System.Data.ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
+            }
+
+            return filas;
+        }
     }
 }

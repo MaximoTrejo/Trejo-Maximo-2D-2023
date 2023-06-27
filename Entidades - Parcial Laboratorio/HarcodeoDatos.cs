@@ -465,8 +465,12 @@ namespace Entidades___Parcial_Laboratorio
             Clientes clientes;
             foreach (Usuario i in Usuarios)
             {
-                clientes = (Clientes)i;
-                return clientes.importe;
+                if (i == usuario)
+                {
+                    clientes = (Clientes)i;
+                    return clientes.importe;
+                }
+                    
             }
             return 0;
         }
